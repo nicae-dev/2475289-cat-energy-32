@@ -12,8 +12,8 @@
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__logo" href="index.html">
-      <img class="main-header__logo-image" src="" alt="Логотип сайта" width="60" height="50">
-      <img class="main-header__logo-text" src="" alt="Cat Energy" width="" height="">
+      <img class="main-header__logo-image" src="#" alt="Логотип сайта" width="33" height="38">
+      <img class="main-header__logo-text" src="#" alt="Cat Energy" width="101" height="18">
     </a>
 
     <nav class="main-nav">
@@ -25,10 +25,10 @@
           <a class="main-nav__link main-nav__link--current">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Каталог продукции</a>
+          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">подбор программы</a>
+          <a class="main-nav__link" href="program.html">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -39,25 +39,25 @@
     <section class="hero">
       <h2 class="hero__title section-title">Функциональное питание для котов</h2>
       <p class="hero__description">Занялся собой? Займись котом!</p>
-      <a class="button" href="#">подобрать программу</a>
-      <img class="hero__image" src="" alt="Упаковка еды Cat Energy Курица" width="" height="">
+      <a class="hero__button button" href="#">Подобрать программу</a>
+      <img class="hero__image" src="#" alt="Упаковка еды Cat Energy Курица" width="280" height="270">
     </section>
 
     <section class="catalog">
       <h2 class="visually-hidden">Категории продукции</h2>
       <ul class="catalog__list">
-        <li class="catalog__item catalog__item-icon-cat-slim">
+        <li class="catalog__item catalog__item--icon-cat-slim">
           <h3 class="catalog__title">похудение</h3>
           <p class="catalog__description">Ваш кот весит больше собаки и почти утратил способность
             лазить по деревьям? Пора на диету! Cat Energy Slim поможет
             вашему питомцу сбросить лишний вес.</p>
-          <a class="catalog__link" href="#">каталог slim</a>
+          <a class="catalog__link" href="#">Каталог slim</a>
         </li>
-        <li class="catalog__item catalog__item-icon-cat-heavy">
+        <li class="catalog__item catalog__item--icon-cat-heavy">
           <h3 class="catalog__title">набор массы</h3>
           <p class="catalog__description">Заработать авторитет среди дворовых котов и даже собак?
             Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-          <a class="catalog__link" href="#">каталог pro</a>
+          <a class="catalog__link" href="#">Каталог pro</a>
         </li>
       </ul>
     </section>
@@ -66,6 +66,11 @@
       <h2 class="features__title section-title">Как это работает</h2>
 
       <ol class="features__list">
+        <!-- todo
+        Вариант 1: features__item features__item--icon-leaf <-------------------(пока выбран этот)
+        Вариант 2: features__item features__item-icon  features__item-icon--leaf
+        Вариант 3: features__item features__item--icon features__item--icon-leaf
+        -->
         <li class="features__item features__item--icon-leaf">
           Функциональное питание содержит только полезные питательные вещества.
         </li>
@@ -89,22 +94,29 @@
           обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих
           привычек и по-прежнему спит по 16 часов в день.</p>
         <dl class="live-example__list">
-          <div class="live-example__item">
-            <dt class="live-example__value">5 КГ</dt>
-            <dd class="live-example__meaning">снижение веса</dd>
+          <div class="live-example__item ">
+            <dt class="live-example__term">снижение веса</dt>
+            <dd class="live-example__value">5 КГ</dd>
           </div>
           <div class="live-example__item">
-            <dt class="live-example__value">60 ДНЕЙ</dt>
-            <dd class="live-example__meaning">затрачено времени</dd>
+            <dt class="live-example__term">затрачено времени</dt>
+            <dd class="live-example__value">60 ДНЕЙ</dd>
           </div>
           <div class="live-example__item-total">
-            <dt class="live-example__total-value">15 000 РУБ.</dt>
-            <dd class="live-example__total-meaning">Затраты на питание:</dd>
+            <dt class="live-example__total-term">Затраты на питание:</dt>
+            <dd class="live-example__total-value">15 000 РУБ.</dd>
           </div>
         </dl>
-        <div class="live-example__images">
-          <img class="live-example__image live-example__image--before" src="" alt="Толстый кот" width="560" height="512">
-          <img class="live-example__image live-example__image--after" src="" alt="Худой кот" width="560" height="512">
+        <div class="live-example__slider compare-slider">
+          <img class="compare-slider__image compare-slider__image--before" src="#" alt="Толстый кот" width="560" height="512">
+          <img class="compare-slider__image compare-slider__image--after" src="#" alt="Худой кот" width="560" height="512">
+          <div class="compare-slider__control">
+            <button class="compare-slider__control-button" type="button">
+              <span class="visually-hidden">
+                Переключить вид
+              </span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -123,24 +135,25 @@
   </main>
 
   <footer class="main-footer">
-    <svg class="main-footer__logo-text" src="" alt="Cat Energy" width="" height="">
-    </svg>
+    <a class="main-footer__logo" href="index.html">
+      <img class="main-footer__logo-text" src="#" alt="Cat Energy" width="128" height="24">
+    </a>
 
     <section class="main-footer__social social">
       <h2 class="visually-hidden">Мы в соцсетях</h2>
       <ul class="social__list">
         <li class="social__item">
-          <a class="social_link icon icon--vk" href="#" target="_blank" rel="noreferrer noopener">
+          <a class="social__link icon icon--vk" href="#" target="_blank" rel="noreferrer noopener">
             <span class="visually-hidden">Вконтакте</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social_link icon icon--yt" href="#" target="_blank" rel="noreferrer noopener">
+          <a class="social__link icon icon--yt" href="#" target="_blank" rel="noreferrer noopener">
             <span class="visually-hidden">Youtube</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social_link icon icon--tg" href="#" target="_blank" rel="noreferrer noopener">
+          <a class="social__link icon icon--tg" href="#" target="_blank" rel="noreferrer noopener">
             <span class="visually-hidden">Telegram</span>
           </a>
         </li>
@@ -149,7 +162,8 @@
 
     <section class="partner">
       <h2 class="visually-hidden">Партнер</h2>
-      <a class="partner__link partner__link--html-academy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
+      <!-- todo или partner__link--html-academy? -->
+      <a class="partner__link icon icon--html-academy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
         HTML Academy
       </a>
     </section>
