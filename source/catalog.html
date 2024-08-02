@@ -35,14 +35,17 @@
   </header>
 
   <main class="main-container">
+    <h1 class="main-container__title section-title">Каталог продукции</h1>
     <section class="catalog">
-      <h1 class="main-container__title section-title">Каталог продукции</h1>
+      <h2 class="visually-hidden">Основной каталог продукции</h2>
       <ul class="catalog__list">
         <li class="catalog__item">
           <article class="product-card">
-            <a class="product-card__link" href="#">
+            <a class="product-card__link-image" href="#">
               <img class="product-card__image" src="#" alt="Оранжевая упаковка" width="68" height="86">
-              <b class="product-card__title">Cat Energy PRO 500 г</b>
+            </a>
+            <a class="product-card__link-title" href="#">
+              <h3 class="product-card__title">Cat Energy PRO 500 г</h3>
             </a>
             <dl class="product-card__description description-list">
               <div class="description-list-item">
@@ -63,9 +66,11 @@
         </li>
         <li class="catalog__item">
           <article class="product-card">
-            <a class="product-card__link" href="#">
+            <a class="product-card__link-image" href="#">
               <img class="product-card__image" src="#" alt="Оранжевая упаковка побольше" width="84" height="100">
-              <b class="product-card__title">Cat Energy PRO 1000 г</b>
+            </a>
+            <a class="product-card__link-title" href="#">
+              <h3 class="product-card__title">Cat Energy PRO 1000 г</h3>
             </a>
             <dl class="product-card__description description-list">
               <div class="description-list-item">
@@ -89,11 +94,14 @@
           <!-- todo точно article, может div? -->
           <!-- todo придумать нормальный нейминг для мода product-card--secondary -->
           <article class="product-card product-card--secondary">
-            <b class="product-card__title">Показать еще 100500 товаров</b>
+            <!-- todo а тут ссылку добавлять в заголовок? -->
+            <a class="product-card__link-title product-card__link-title--icon-plus" href="#">
+              <h3 class="product-card__title">Показать еще 100500 товаров</h3>
+            </a>
             <dl class="product-card__description">
               На самом деле вкусов гораздо больше!
             </dl>
-            <button class="product-card__button button button--secondary" type="button">Показать все</button>
+            <a class="product-card__button button button--secondary" href="#">Показать все</a>
           </article>
         </li>
 
