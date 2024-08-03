@@ -47,18 +47,18 @@
             <a class="product-card__link-title" href="#">
               <h3 class="product-card__title">Cat Energy PRO 500 г</h3>
             </a>
-            <dl class="product-card__description description-list">
-              <div class="description-list-item">
-                <dt class="description-list__term">Масса</dt>
-                <dd class="description-list__value">500 г</dd>
+            <dl class="product-card__desc desc-list">
+              <div class="product-card__desc-inner-wrap">
+                <dt class="product-card__desc-term">Масса</dt>
+                <dd class="product-card__desc-value">500 г</dd>
               </div>
-              <div class="description-list-item">
-                <dt class="description-list__term">Вкус</dt>
-                <dd class="description-list__value">Курица</dd>
+              <div class="product-card__desc-inner-wrap">
+                <dt class="product-card__desc-term">Вкус</dt>
+                <dd class="product-card__desc-value">Курица</dd>
               </div>
-              <div class="description-list-item">
-                <dt class="description-list__term">Цена</dt>
-                <dd class="description-list__value">700 ₽</dd>
+              <div class="product-card__desc-inner-wrap">
+                <dt class="product-card__desc-term">Цена</dt>
+                <dd class="product-card__desc-value">700 ₽</dd>
               </div>
             </dl>
             <button class="product-card__button button" type="button">Заказать</button>
@@ -72,18 +72,18 @@
             <a class="product-card__link-title" href="#">
               <h3 class="product-card__title">Cat Energy PRO 1000 г</h3>
             </a>
-            <dl class="product-card__description description-list">
-              <div class="description-list-item">
-                <dt class="description-list__term">Масса</dt>
-                <dd class="description-list__value">1000 г</dd>
+            <dl class="product-card__desc desc-list">
+              <div class="product-card__desc-inner-wrap">
+                <dt class="product-card__desc-term">Масса</dt>
+                <dd class="product-card__desc-value">1000 г</dd>
               </div>
-              <div class="description-list-item">
-                <dt class="description-list__term">Вкус</dt>
-                <dd class="description-list__value">Курица</dd>
+              <div class="product-card__desc-inner-wrap">
+                <dt class="product-card__desc-term">Вкус</dt>
+                <dd class="product-card__desc-value">Курица</dd>
               </div>
-              <div class="description-list-item">
-                <dt class="description-list__term">Цена</dt>
-                <dd class="description-list__value">1000 ₽</dd>
+              <div class="product-card__desc-inner-wrap">
+                <dt class="product-card__desc-term">Цена</dt>
+                <dd class="product-card__desc-value">1000 ₽</dd>
               </div>
             </dl>
             <button class="product-card__button button" type="button">Заказать</button>
@@ -91,18 +91,13 @@
         </li>
 
         <li class="catalog__item">
-          <!-- todo точно article, может div? -->
-          <!-- todo придумать нормальный нейминг для мода product-card--secondary -->
-          <article class="product-card product-card--secondary">
-            <!-- todo а тут ссылку добавлять в заголовок? -->
-            <a class="product-card__link-title product-card__link-title--icon-plus" href="#">
-              <h3 class="product-card__title">Показать еще 100500 товаров</h3>
-            </a>
-            <dl class="product-card__description">
+          <div class="product-card product-card--more">
+            <h3 class="product-card__title product-card__title--icon-plus">Показать еще 100500 товаров</h3>
+            <p class="product-card__desc">
               На самом деле вкусов гораздо больше!
-            </dl>
+            </p>
             <a class="product-card__button button button--secondary" href="#">Показать все</a>
-          </article>
+          </div>
         </li>
 
       </ul>
@@ -119,17 +114,17 @@
       <h2 class="visually-hidden">Мы в соцсетях</h2>
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link icon icon--vk" href="#" target="_blank" rel="noreferrer noopener">
+          <a class="social__link social__link--icon-vk" href="#" target="_blank" rel="noreferrer noopener">
             <span class="visually-hidden">Вконтакте</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link icon icon--yt" href="#" target="_blank" rel="noreferrer noopener">
+          <a class="social__link social__link--icon-yt" href="#" target="_blank" rel="noreferrer noopener">
             <span class="visually-hidden">Youtube</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link icon icon--tg" href="#" target="_blank" rel="noreferrer noopener">
+          <a class="social__link social__link--icon-tg" href="#" target="_blank" rel="noreferrer noopener">
             <span class="visually-hidden">Telegram</span>
           </a>
         </li>
@@ -138,8 +133,7 @@
 
     <section class="partner">
       <h2 class="visually-hidden">Партнер</h2>
-      <!-- todo или partner__link--html-academy? -->
-      <a class="partner__link icon icon--html-academy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
+      <a class="partner__link partner__link--icon-html-academy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
         HTML Academy
       </a>
     </section>
