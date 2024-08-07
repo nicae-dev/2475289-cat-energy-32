@@ -22,7 +22,7 @@
       </button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--current">Главная</a>
+          <a class="main-nav__link main-nav__link--current" href="#">Главная</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
@@ -37,7 +37,7 @@
   <main class="main-container">
     <h1 class="visually-hidden">Cat Energy</h1>
     <section class="hero">
-      <h2 class="hero__title section-title">Функциональное питание для котов</h2>
+      <h2 class="hero__title section-title section-title--index">Функциональное питание для котов</h2>
       <p class="hero__desc">Занялся собой? Займись котом!</p>
       <a class="hero__button button" href="#">Подобрать программу</a>
       <img class="hero__image" src="#" alt="Упаковка еды Cat Energy Курица" width="280" height="270">
@@ -46,14 +46,14 @@
     <section class="catalog">
       <h2 class="visually-hidden">Категории продукции</h2>
       <ul class="catalog__list">
-        <li class="catalog__item catalog__item--icon-cat-slim">
+        <li class="catalog__item catalog__item--slim">
           <h3 class="catalog__title">похудение</h3>
           <p class="catalog__desc">Ваш кот весит больше собаки и почти утратил способность
             лазить по деревьям? Пора на диету! Cat Energy Slim поможет
             вашему питомцу сбросить лишний вес.</p>
           <a class="catalog__link" href="#">Каталог slim</a>
         </li>
-        <li class="catalog__item catalog__item--icon-cat-heavy">
+        <li class="catalog__item catalog__item--heavy">
           <h3 class="catalog__title">набор массы</h3>
           <p class="catalog__desc">Заработать авторитет среди дворовых котов и даже собак?
             Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
@@ -66,11 +66,6 @@
       <h2 class="features__title section-title">Как это работает</h2>
 
       <ol class="features__list">
-        <!-- todo
-        Вариант 1: features__item features__item--icon-leaf <-------------------(пока выбран этот)
-        Вариант 2: features__item features__item-icon  features__item-icon--leaf
-        Вариант 3: features__item features__item--icon features__item--icon-leaf
-        -->
         <li class="features__item features__item--icon-leaf">
           Функциональное питание содержит только полезные питательные вещества.
         </li>
@@ -108,8 +103,8 @@
           </div>
         </dl>
         <div class="live-example__slider compare-slider">
-          <img class="compare-slider__image compare-slider__image--before" src="#" alt="Толстый кот" width="560" height="512">
-          <img class="compare-slider__image compare-slider__image--after" src="#" alt="Худой кот" width="560" height="512">
+          <img class="compare-slider__image compare-slider__image--before" src="#" alt="Толстый кот" width="280" height="256">
+          <img class="compare-slider__image compare-slider__image--after" src="#" alt="Худой кот" width="280" height="256">
           <div class="compare-slider__control">
             <button class="compare-slider__control-button" type="button">
               <span class="visually-hidden">
@@ -130,6 +125,7 @@
       </address>
       <div class="contacts__map">
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa70b588485700b86dbeb0b23fb0b46061e5efc784e68ea2d456d7e1fca6dc536&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+        <img class="contacts__map-image" src="#" alt="Адрес на карте" width="320" height="360">
       </div>
     </section>
   </main>
@@ -161,8 +157,8 @@
     </section>
 
     <section class="partner">
-      <h2 class="visually-hidden">Партнер</h2>
-      <a class="partner__link partner__link--icon-html-academy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
+      <h2 class="visually-hidden">Разработано при поддержке</h2>
+      <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
         HTML Academy
       </a>
     </section>
