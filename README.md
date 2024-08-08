@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Вероника Ефимова](https://up.htmlacademy.ru/adaptive/32/user/2475289).
-* Наставник: [Иван Жарков](https://htmlacademy.ru/profile/id191422).
+* Наставник: [Ирина Антипина](https://htmlacademy.ru/profile/id2108789).
 
 ---
 
