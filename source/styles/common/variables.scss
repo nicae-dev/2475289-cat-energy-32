@@ -1,15 +1,24 @@
 /* здесь используйте глобальные переменные */
-$font-main: "Oswald", sans-serif;
+$font-primary: "Oswald", sans-serif;
 $font-secondary: "Lato", sans-serif;
 
 $text-color: #000000;
 $bg-color:#68b738;
 $bg-color-secondary:#f2f2f2;
 
+//кнопки
 $button-color: #ffffff;
+$button-color-hover: #ffffff;
+$button-color-active:rgba(255, 255, 255, 0.3);
+
 $button-bg-color: #68b738;
-$button-secondary-color: #cdcdcd;
+$button-bg-color-hover: #5eaa2f;
+$button-bg-color-active: #5eaa2f;
+
+$button-secondary-color: #444444;
 $button-secondary-bg-color: #f2f2f2;
+$button-secondary-bg-color-hover: #ebebeb;
+$button-secondary-bg-color-active: #ebebeb;
 
 // $basic-green: #68b738;
 // $basic-grey: #f2f2f2;
