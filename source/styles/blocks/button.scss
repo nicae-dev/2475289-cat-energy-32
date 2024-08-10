@@ -1,0 +1,13 @@
+.button {
+  padding: 10px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  background-color: $button-bg-color;
+  color: $button-color;
+}
+
+.button--secondary {
+}
