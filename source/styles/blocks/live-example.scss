@@ -1,13 +1,20 @@
 .live-example {
+  background-color: $bg-primary-color;
 }
 
 .live-example__title {
+  line-height: 40px;
 }
 
 .live-example__inner-wrap {
 }
 
 .live-example__desc {
+  font-family: $font-secondary;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: $text-secondary-color;
 }
 
 .live-example__list {
@@ -17,12 +24,27 @@
 }
 
 .live-example__term {
+  font-family: $font-secondary;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  text-transform: lowercase;
+  color: $text-secondary-color;
 }
 
 .live-example__value {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $text-color;
 }
 
 .live-example__item-total {
+  color: $text-color;
+  text-transform: uppercase;
 }
 
 .live-example__total-term {

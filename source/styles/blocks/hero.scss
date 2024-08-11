@@ -1,14 +1,36 @@
+$hero-index-color: #ffffff;
+
 .hero {
+  background:
+    linear-gradient(
+      to bottom,
+      $bg-secondary-color 60%,
+      $bg-basic-color 60%
+    );
+  color: $hero-index-color;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    color: $text-color;
+    text-align: left;
+  }
 }
 
 .hero__title {
+  line-height: 1em;
+  color: inherit;
 }
 
 .hero__desc {
-}
-
-.hero__button {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: inherit;
 }
 
 .hero__image {
+}
+
+.hero__button {
 }

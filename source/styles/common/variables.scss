@@ -3,8 +3,11 @@ $font-primary: "Oswald", sans-serif;
 $font-secondary: "Lato", sans-serif;
 
 $text-color: #000000;
-$bg-color:#68b738;
-$bg-color-secondary:#f2f2f2;
+$text-secondary-color:#444444;
+
+$bg-basic-color:#ffffff;
+$bg-primary-color:#f2f2f2;
+$bg-secondary-color:#68b738;
 
 //кнопки
 $button-color: #ffffff;
@@ -19,6 +22,8 @@ $button-secondary-color: #444444;
 $button-secondary-bg-color: #f2f2f2;
 $button-secondary-bg-color-hover: #ebebeb;
 $button-secondary-bg-color-active: #ebebeb;
+
+$input-color:#444444;
 
 // $basic-green: #68b738;
 // $basic-grey: #f2f2f2;

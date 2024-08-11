@@ -11,7 +11,8 @@
   color: $button-color;
   border: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $button-bg-color-hover;
     color: $button-color-hover;
   }
@@ -26,7 +27,8 @@
   background-color: $button-secondary-bg-color;
   color: $button-secondary-color;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $button-secondary-bg-color-hover;
     color: $button-secondary-color;
   }

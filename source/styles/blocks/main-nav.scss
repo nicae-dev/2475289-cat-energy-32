@@ -11,6 +11,20 @@
 }
 
 .main-nav__link {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+  color: $text-color;
+
+  &:hover,
+  &:focus {
+    color: rgba($text-color, 0.6);
+  }
+
+  &:active {
+    color: rgba($text-color, 0.3);
+  }
 }
 
 .main-nav__link--current {
