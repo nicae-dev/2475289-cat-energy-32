@@ -10,6 +10,7 @@
   background-color: $button-bg-color;
   color: $button-color;
   border: none;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -20,6 +21,11 @@
   &:active {
     background-color: $button-bg-color-active;
     color: $button-color-active;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 26px;
   }
 }
 
