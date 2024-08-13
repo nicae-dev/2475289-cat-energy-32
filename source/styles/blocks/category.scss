@@ -1,5 +1,5 @@
-.category {
-}
+// .category {
+// }
 
 .category__list {
   font-weight: 400;
@@ -9,8 +9,10 @@
   background-color: $bg-primary-color;
 }
 
-.category__item--slim {
-}
+// .category__item--slim {
+// }
+// .category__item--heavy {
+// }
 
 .category__title {
   font-size: 24px;
@@ -33,14 +35,11 @@
   text-decoration: none;
 
   &:hover,
-  &:focus{
-
+  &:focus {
+    opacity: 0.6;
   }
 
   &:active {
     opacity: 0.3;
   }
-}
-
-.category__item--heavy {
 }

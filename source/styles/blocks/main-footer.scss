@@ -1,15 +1,15 @@
-.main-footer {
-}
+// .main-footer {
+// }
 
-.main-footer__logo {
-}
+// .main-footer__logo {
+// }
 
-.main-footer__social {
-}
+// .main-footer__social {
+// }
 
-.main-footer__partner{
+// .main-footer__partner{
 
-}
+// }
 
 .main-footer__partner-link {
   font-family: $font-secondary;
@@ -18,4 +18,8 @@
   line-height: 20px;
   text-decoration: none;
   color: $text-secondary-color;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
