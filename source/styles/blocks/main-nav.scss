@@ -11,8 +11,9 @@
 // .main-nav__toggle {
 // }
 
-// .main-nav__list {
-// }
+.main-nav__list {
+  @include list();
+}
 
 // .main-nav__item {
 // }
@@ -21,11 +22,13 @@
   font-size: 20px;
   font-weight: 400;
   line-height: 1em;
-  color: inherit;
+  text-transform: uppercase;
+  text-align: center;
   text-decoration: none;
+  color: inherit;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     // color: rgba($main-nav-link-color, 0.6);
     opacity: 0.6;
   }

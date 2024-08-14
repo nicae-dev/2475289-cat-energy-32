@@ -1,4 +1,5 @@
 .button {
+  display: block;
   padding: 10px;
   font-family: inherit;
   font-size: 16px;
@@ -13,7 +14,7 @@
   cursor: pointer;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     background-color: $button-bg-color-hover;
     color: $button-color-hover;
   }
@@ -34,7 +35,7 @@
   color: $button-secondary-color;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     background-color: $button-secondary-bg-color-hover;
     color: $button-secondary-color;
   }

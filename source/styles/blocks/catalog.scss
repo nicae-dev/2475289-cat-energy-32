@@ -1,8 +1,11 @@
 // .catalog {
 // }
 
-// .catalog__list {
-// }
+.catalog__list {
+  @include list();
+  display: flex;
+  flex-wrap: wrap;
+}
 
 // .catalog__item {
 // }

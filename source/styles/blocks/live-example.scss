@@ -21,7 +21,7 @@
 // }
 
 .live-example__desc {
-  @include index-text();
+  @include text();
   color: $text-secondary-color;
 }
 

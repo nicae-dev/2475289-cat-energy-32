@@ -1,8 +1,9 @@
 // .social {
 // }
 
-// .social__list {
-// }
+.social__list {
+  @include list();
+}
 
 // .social__item {
 // }

@@ -1,8 +1,10 @@
+$hero-bg-secondary-color: rgba($bg-secondary-color, 0.85);
+
 .hero {
   background:
     linear-gradient(
       to bottom,
-      $bg-secondary-color 60%,
+      $hero-bg-secondary-color 60%,
       $bg-basic-color 60%
     );
   color: $text-with-bg-color;
@@ -18,7 +20,7 @@
     background:
       linear-gradient(
         to left,
-        $bg-secondary-color 50%,
+        $hero-bg-secondary-color 50%,
         $bg-basic-color 50%
       );
   }

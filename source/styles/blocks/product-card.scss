@@ -1,5 +1,16 @@
 .product-card {
-  background-color: $bg-primary-color;
+  // todo Проверить, какой вариант лучше
+  // width: 100%;
+  width: 280px;
+
+  @media (min-width: 768px) {
+    width: 324px;
+    background-color: $bg-primary-color;
+  }
+
+  @media (min-width: 1440px) {
+    width: 245px;
+  }
 }
 
 .product-card--more {
@@ -20,7 +31,7 @@
   text-decoration: none;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     opacity: 0.6;
   }
 

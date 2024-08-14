@@ -5,8 +5,9 @@
 
 // }
 
-// .catalog-extra__list {
-// }
+.catalog-extra__list {
+  @include list();
+}
 
 // .catalog-extra__item {
 // }

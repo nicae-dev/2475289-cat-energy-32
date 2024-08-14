@@ -5,11 +5,12 @@
   line-height: 40px;
 }
 
-// .features__list {
-// }
+.features__list {
+  @include list();
+}
 
 .features__item {
-  @include index-text();
+  @include text();
   color: $text-secondary-color;
 }
 
