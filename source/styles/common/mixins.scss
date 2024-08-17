@@ -26,3 +26,17 @@
   padding: 0;
   list-style-type: none;
 }
+
+@mixin icon($width, $height, $id, $position-x:center, $position-y:center) {
+  display: block;
+  content: "";
+  width: $width;
+  height: $height;
+  background-image: url("../../icons/stack.svg#"+$id);
+  background-position: $position-x $position-y;
+  background-repeat: no-repeat;
+}
+
+@mixin icon-bg-image($id) {
+  background-image: url("../../icons/stack.svg#"+$id);
+}
