@@ -1,0 +1,36 @@
+.contacts {
+  background-color: $bg-basic-color;
+}
+
+.contacts__title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+// .contacts__address-wrap {
+// }
+
+.contacts__address {
+  font-family: $font-secondary;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  font-style: normal;
+  color: $text-secondary-color;
+
+  @media (min-width: 768px) {
+    text-align: right;
+  }
+
+  @media (min-width: 1440px) {
+    text-align: left;
+  }
+}
+
+// .contacts__map {
+// }
+
+// .contacts__map-image {
+// }

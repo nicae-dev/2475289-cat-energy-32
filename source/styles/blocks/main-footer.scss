@@ -1,0 +1,26 @@
+.main-footer {
+  background-color: $bg-primary-color;
+}
+
+// .main-footer__logo {
+// }
+
+// .main-footer__social {
+// }
+
+// .main-footer__partner{
+
+// }
+
+.main-footer__partner-link {
+  font-family: $font-secondary;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+  color: $text-secondary-color;
+
+  &:active {
+    opacity: 0.3;
+  }
+}

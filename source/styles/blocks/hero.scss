@@ -1,0 +1,50 @@
+$hero-bg-secondary-color: rgba($bg-secondary-color, 0.85);
+
+.hero {
+  background:
+    linear-gradient(
+      to bottom,
+      $hero-bg-secondary-color 60%,
+      $bg-basic-color 60%
+    );
+  color: $text-with-bg-color;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    color: $text-color;
+    text-align: left;
+    background: $bg-basic-color;
+  }
+
+  @media (min-width: 1440px) {
+    background:
+      linear-gradient(
+        to left,
+        $hero-bg-secondary-color 50%,
+        $bg-basic-color 50%
+      );
+  }
+}
+
+.hero__title {
+  line-height: 1em;
+  color: inherit;
+}
+
+.hero__desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1em;
+  text-transform: uppercase;
+  color: inherit;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+// .hero__image {
+// }
+
+// .hero__button {
+// }

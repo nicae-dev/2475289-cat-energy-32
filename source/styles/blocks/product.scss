@@ -1,0 +1,52 @@
+// .product {
+// }
+
+.product__title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1em;
+  text-transform: uppercase;
+  color: $card-title-color;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+.product__count {
+  font-family: $font-secondary;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1em;
+  color: $text-secondary-color;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  // @media (min-width: 1440px) {
+  //   text-align: right;
+  // }
+}
+
+.product__price {
+  font-family: $font-secondary;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1em;
+  // text-align: right;
+  color: $text-secondary-color;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  // @media (min-width: 1440px) {
+  //   text-align: left;
+  // }
+}
+
+// .product__button {
+// }

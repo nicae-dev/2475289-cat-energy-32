@@ -1,0 +1,36 @@
+// .catalog-extra {
+// }
+
+// .catalog-extra__title {
+
+// }
+
+.catalog-extra__list {
+  @include list();
+}
+
+// .catalog-extra__item {
+// }
+
+
+.catalog-extra__promotion {
+  background-color: rgba($bg-secondary-color, 0.85);
+  // background-image: url("../../images/promotion_cat_background-mobile@1x.jpg");
+}
+
+.catalog-extra__promotion-text {
+  font-family: $font-secondary;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: $text-with-bg-color;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+
+  @media (min-width: 1440px) {
+    text-align: center;
+  }
+}
