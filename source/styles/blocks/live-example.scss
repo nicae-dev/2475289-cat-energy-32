@@ -1,0 +1,87 @@
+.live-example {
+  background-color: $bg-primary-color;
+
+  // todo почитать про сложные фоны
+  // @media (min-width: 768px) {
+  // }
+
+  // @media (min-width: 1440px) {
+  // }
+}
+
+.live-example__title {
+  line-height: 40px;
+
+  @media (min-width: 768px) {
+    line-height: 1em;
+  }
+}
+
+// .live-example__inner-wrap {
+// }
+
+.live-example__desc {
+  @include text();
+  color: $text-secondary-color;
+}
+
+// .live-example__list {
+// }
+
+// .live-example__item {
+// }
+
+.live-example__term {
+  font-family: $font-secondary;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1em;
+  text-align: center;
+  text-transform: lowercase;
+  color: $text-secondary-color;
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.live-example__value {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $text-color;
+
+  @media (min-width: 768px) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.live-example__item-total {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $text-color;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: 1440px) {
+    line-height: 20px;
+    text-align: center;
+  }
+}
+
+// .live-example__total-term {
+// }
+
+// .live-example__total-value {
+// }
+
+// .live-example__slider {
+// }

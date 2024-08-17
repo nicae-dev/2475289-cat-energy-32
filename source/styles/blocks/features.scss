@@ -1,0 +1,27 @@
+// .features {
+// }
+
+.features__title {
+  line-height: 40px;
+}
+
+.features__list {
+  @include list();
+}
+
+.features__item {
+  @include text();
+  color: $text-secondary-color;
+}
+
+// .features__item--icon-leaf {
+// }
+
+// .features__item--icon-water {
+// }
+
+// .features__item--icon-eat {
+// }
+
+// .features__item--icon-clock {
+// }

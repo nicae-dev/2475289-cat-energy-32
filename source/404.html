@@ -14,8 +14,67 @@
 </head>
 
 <body class="page__body">
-  <h1>404</h1>
-  <p>Страница не найдена. <a href="/">Перейти на главную</a>.</p>
+  <header class="main-header">
+    <a class="main-header__logo logo" href="index.html">
+      <img class="logo__image" src="#" alt="Логотип сайта" width="33" height="38">
+      <img class="logo__text" src="#" alt="Cat Energy" width="101" height="18">
+    </a>
+
+    <nav class="main-header__nav main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="index.html">Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="program.html">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-container">
+    <h1>404</h1>
+    <p>Страница не найдена. <a href="/">Перейти на главную</a>.</p>
+  </main>
+
+  <footer class="main-footer">
+    <a class="main-footer__logo logo" href="index.html">
+      <img class="logo__text" src="#" alt="Cat Energy" width="128" height="24">
+    </a>
+
+    <section class="main-footer__social social">
+      <h2 class="visually-hidden">Мы в соцсетях</h2>
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--icon-vk" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--icon-yt" href="https://www.youtube.com/@HTMLAcademyTV" target="_blank" rel="noreferrer noopener">
+            <span class="visually-hidden">Youtube</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--icon-tg" href="https://htmlacademy.t.me" target="_blank" rel="noreferrer noopener">
+            <span class="visually-hidden">Telegram</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="main-footer__partner">
+      <h2 class="visually-hidden">Разработано при поддержке</h2>
+      <a class="main-footer__partner-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
+        HTML Academy
+      </a>
+    </section>
+  </footer>
 </body>
 
 </html>
