@@ -8,14 +8,35 @@
 // .social__item {
 // }
 
-// .social__link {
-// }
+.social__link {
+  --color: #{$icon-color};
+  display: block;
+  color: var(--color);
 
-// .social__link--icon-vk {
-// }
+  &::before {
+    @include icon-mask(40px,40px,"");
+    background-color: var(--color);
+    mask-size: 27px 18px;
+  }
 
-// .social__link--icon-yt {
-// }
+  &:hover,
+  &:focus-visible {
+    --color: #{$icon-color-hover};
+  }
 
-// .social__link--icon-tg {
-// }
+  &:active {
+    --color: #{$icon-color-active};
+  }
+}
+
+.social__link--icon-vk::before {
+  @include icon-mask-image("vk");
+}
+
+.social__link--icon-yt::before {
+  @include icon-mask-image("yt");
+}
+
+.social__link--icon-tg::before {
+  @include icon-mask-image("tg");
+}

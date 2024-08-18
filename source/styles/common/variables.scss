@@ -13,7 +13,7 @@ $bg-secondary-color:#68b738;
 //кнопки
 $button-color: #ffffff;
 $button-color-hover: #ffffff;
-$button-color-active:rgba(255, 255, 255, 0.3);
+$button-color-active:rgba(#ffffff, 0.3);
 
 $button-bg-color: #68b738;
 $button-bg-color-hover: #5eaa2f;
@@ -28,6 +28,11 @@ $input-color:#444444;
 
 $card-title-color:#222222;
 $card-title-secondary-color:#111111;
+
+$icon-color:#666666;
+$icon-color-hover:#68b738;
+$icon-color-active:rgba(#68b738, 0.3);
+
 
 // $basic-green: #68b738;
 // $basic-grey: #f2f2f2;

@@ -40,3 +40,17 @@
 @mixin icon-bg-image($id) {
   background-image: url("../../icons/stack.svg#"+$id);
 }
+
+@mixin icon-mask($width, $height, $id, $position-x:center, $position-y:center) {
+  display: block;
+  content: "";
+  width: $width;
+  height: $height;
+  mask-image: url("../../icons/stack.svg#"+$id);
+  mask-position: $position-x $position-y;
+  mask-repeat: no-repeat;
+}
+
+@mixin icon-mask-image($id) {
+  mask-image: url("../../icons/stack.svg#"+$id);
+}
