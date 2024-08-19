@@ -36,7 +36,8 @@
   @if $id != "" {
     background-image: url("../../icons/stack.svg#"+$id);
   }
-  background-position: $position-x $position-y;
+  background-position-x: $position-x;
+  background-position-y: $position-y;
   background-repeat: no-repeat;
 }
 

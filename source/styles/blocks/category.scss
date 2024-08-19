@@ -60,6 +60,8 @@
 }
 
 .category__link {
+  display: flex;
+  align-items: center;
   font-size: 16px;
   line-height: 1em;
   text-transform: uppercase;
@@ -67,22 +69,19 @@
   text-decoration: none;
 
   &::after {
-    @include icon(67px, 53px, "arrow-small", center, left);
-    background-size: 24px 12px;
+    @include icon(32px, 12px, "arrow", -8px, center);
   }
 
   &:hover::after,
   &:focus-visible::after {
-    @include icon-bg-image("arrow-big");
-    background-size: 32px 12px;
+    background-position-x: 0;
   }
 
   &:active {
     opacity: 0.3;
 
     &::after {
-      @include icon-bg-image("arrow-big");
-      background-size: 32px 12px;
+      background-position-x: 0;
     }
   }
 
