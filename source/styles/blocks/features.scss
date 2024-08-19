@@ -14,7 +14,7 @@
   color: $text-secondary-color;
 
   &::before {
-    @include icon(60px, 60px, "");
+    @include icon(60px, 60px);
     background-color: $bg-secondary-color;
     background-size: 26px 30px;
 

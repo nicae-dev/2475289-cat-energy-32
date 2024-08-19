@@ -27,12 +27,15 @@
   list-style-type: none;
 }
 
-@mixin icon($width, $height, $id, $position-x:center, $position-y:center) {
+@mixin icon($width, $height, $id:"", $position-x:center, $position-y:center) {
   display: block;
   content: "";
   width: $width;
   height: $height;
-  background-image: url("../../icons/stack.svg#"+$id);
+
+  @if $id != "" {
+    background-image: url("../../icons/stack.svg#"+$id);
+  }
   background-position: $position-x $position-y;
   background-repeat: no-repeat;
 }
@@ -41,12 +44,15 @@
   background-image: url("../../icons/stack.svg#"+$id);
 }
 
-@mixin icon-mask($width, $height, $id, $position-x:center, $position-y:center) {
+@mixin icon-mask($width, $height, $id:"", $position-x:center, $position-y:center) {
   display: block;
   content: "";
   width: $width;
   height: $height;
-  mask-image: url("../../icons/stack.svg#"+$id);
+
+  @if $id != "" {
+    mask-image: url("../../icons/stack.svg#"+$id);
+  }
   mask-position: $position-x $position-y;
   mask-repeat: no-repeat;
 }

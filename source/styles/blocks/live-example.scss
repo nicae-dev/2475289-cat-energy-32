@@ -46,6 +46,7 @@
 }
 
 .live-example__value {
+  margin: 0;
   font-size: 24px;
   font-weight: 400;
   line-height: 1em;
@@ -80,8 +81,9 @@
 // .live-example__total-term {
 // }
 
-// .live-example__total-value {
-// }
+.live-example__total-value {
+  margin: 0;
+}
 
 // .live-example__slider {
 // }

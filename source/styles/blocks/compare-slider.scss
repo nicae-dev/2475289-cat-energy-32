@@ -28,10 +28,15 @@
     background-color: var(--color);
   }
 
-  &:hover,
-  &:focus-visible {
+  &:hover {
     --color: #{$icon-color-hover};
   }
+
+  &:focus-visible {
+    --color: #{$icon-color-hover};
+    outline-color: var(--color);
+  }
+
 
   &:active {
     --color: #{$icon-color-active};
