@@ -20,7 +20,21 @@
   text-decoration: none;
   color: $text-secondary-color;
 
+  &::after {
+    @include icon-mask(27px,34px,"html-academy");
+    background-color: $icon-color;
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    background-color: $icon-color-hover;
+  }
+
   &:active {
+    &::after {
+      background-color: $icon-color-hover;
+    }
+
     opacity: 0.3;
   }
 }

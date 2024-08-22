@@ -57,6 +57,15 @@
 .product-card__title--icon-plus {
   text-align: center;
   color: $card-title-secondary-color;
+
+  &::before {
+    @include icon(30px,30px,"plus");
+
+    @media (min-width: 768px) {
+      width: 60px;
+      height: 60px;
+    }
+  }
 }
 
 .product-card__desc {
@@ -85,6 +94,7 @@
 }
 
 .product-card__desc-value {
+  margin: 0;
   text-align: right;
 
   @media (min-width: 768px) {

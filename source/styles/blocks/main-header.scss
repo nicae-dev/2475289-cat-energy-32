@@ -1,8 +1,16 @@
 // .main-header {
 // }
 
-// .main-header__logo {
-// }
+.main-header__logo {
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
 
 // .main-header__nav{
 

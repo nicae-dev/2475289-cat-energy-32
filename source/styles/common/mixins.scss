@@ -26,3 +26,38 @@
   padding: 0;
   list-style-type: none;
 }
+
+@mixin icon($width, $height, $id:"", $position-x:center, $position-y:center) {
+  display: block;
+  content: "";
+  width: $width;
+  height: $height;
+
+  @if $id != "" {
+    background-image: url("../../icons/stack.svg#"+$id);
+  }
+  background-position-x: $position-x;
+  background-position-y: $position-y;
+  background-repeat: no-repeat;
+}
+
+@mixin icon-bg-image($id) {
+  background-image: url("../../icons/stack.svg#"+$id);
+}
+
+@mixin icon-mask($width, $height, $id:"", $position-x:center, $position-y:center) {
+  display: block;
+  content: "";
+  width: $width;
+  height: $height;
+
+  @if $id != "" {
+    mask-image: url("../../icons/stack.svg#"+$id);
+  }
+  mask-position: $position-x $position-y;
+  mask-repeat: no-repeat;
+}
+
+@mixin icon-mask-image($id) {
+  mask-image: url("../../icons/stack.svg#"+$id);
+}

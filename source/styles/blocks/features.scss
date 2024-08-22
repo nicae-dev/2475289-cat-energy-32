@@ -12,16 +12,31 @@
 .features__item {
   @include text();
   color: $text-secondary-color;
+
+  &::before {
+    @include icon(60px, 60px);
+    background-color: $bg-secondary-color;
+    background-size: 26px 30px;
+
+    @media (min-width: 768px) {
+      width: 80px;
+      height: 80px;
+    }
+  }
 }
 
-// .features__item--icon-leaf {
-// }
+.features__item--icon-leaf::before {
+  @include icon-bg-image("leaf");
+}
 
-// .features__item--icon-water {
-// }
+.features__item--icon-water::before {
+  @include icon-bg-image("water");
+}
 
-// .features__item--icon-eat {
-// }
+.features__item--icon-eat::before {
+  @include icon-bg-image("eat");
+}
 
-// .features__item--icon-clock {
-// }
+.features__item--icon-clock::before {
+  @include icon-bg-image("clock");
+}

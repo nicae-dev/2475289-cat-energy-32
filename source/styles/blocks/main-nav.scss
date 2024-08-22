@@ -8,17 +8,50 @@
   }
 }
 
-// .main-nav__toggle {
-// }
+.main-nav__toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    @include icon(24px, 24px, "menu-open");
+  }
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.main-nav__toggle--close::before {
+  @include icon-bg-image("menu-close");
+}
 
 .main-nav__list {
   @include list();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 // .main-nav__item {
 // }
 
 .main-nav__link {
+  padding: 23px;
+  display: block;
   font-size: 20px;
   font-weight: 400;
   line-height: 1em;

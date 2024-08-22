@@ -13,5 +13,32 @@
 // .compare-slider__control {
 // }
 
-// .compare-slider__control-button {
-// }
+.compare-slider__control-button {
+  --color: #{$icon-color};
+  display: block;
+  padding: 0;
+  color: var(--color);
+  background-color: #ffffff;
+  border: 2px solid var(--color);
+  border-radius: 100%;
+
+  &::before {
+    @include icon-mask(40px,40px,"slider-control");
+    mask-size: 24px 18px;
+    background-color: var(--color);
+  }
+
+  &:hover {
+    --color: #{$icon-color-hover};
+  }
+
+  &:focus-visible {
+    --color: #{$icon-color-hover};
+    outline-color: var(--color);
+  }
+
+
+  &:active {
+    --color: #{$icon-color-active};
+  }
+}
