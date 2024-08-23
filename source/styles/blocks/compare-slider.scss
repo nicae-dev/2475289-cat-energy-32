@@ -1,17 +1,24 @@
-// .compare-slider {
-// }
+.compare-slider {
+  display: grid;
+}
 
 // .compare-slider__image {
 // }
 
-// .compare-slider__image--before {
-// }
+.compare-slider__image--before {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
 
-// .compare-slider__image--after {
-// }
+.compare-slider__image--after {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
 
-// .compare-slider__control {
-// }
+.compare-slider__control {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
 
 .compare-slider__control-button {
   --color: #{$icon-color};
