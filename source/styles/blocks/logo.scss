@@ -1,4 +1,7 @@
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 13px;
   text-decoration: none;
   color: #111111;
 
@@ -12,9 +15,10 @@
   }
 }
 
-// .logo__image {
-// }
+.logo__image {
+  display: block;
+}
 
-// .logo__text {
-
-// }
+.logo__text {
+  display: block;
+}

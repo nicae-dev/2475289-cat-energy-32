@@ -2,6 +2,8 @@
 // }
 
 .main-header__logo {
+  width: 100%;
+
   &:hover,
   &:focus {
     opacity: 0.8;
@@ -15,3 +17,39 @@
 // .main-header__nav{
 
 // }
+
+
+.main-header__menu-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    @include icon(24px, 24px, "menu-open");
+  }
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-header__menu-toggle--close::before {
+  @include icon-bg-image("menu-close");
+}
+
+.main-header__logo-text {
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}

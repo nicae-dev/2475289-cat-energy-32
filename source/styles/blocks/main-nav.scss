@@ -8,32 +8,6 @@
   }
 }
 
-.main-nav__toggle {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-
-  &::before {
-    @include icon(24px, 24px, "menu-open");
-  }
-
-  &:hover,
-  &:focus-visible {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
-
-.main-nav__toggle--close::before {
-  @include icon-bg-image("menu-close");
-}
 
 .main-nav__list {
   @include list();

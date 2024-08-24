@@ -1,7 +1,7 @@
+$card-separator-color: #cdcdcd;
+
 .product-card {
   padding: 20px 0 25px;
-  // todo Проверить, какой вариант лучше
-  // width: 100%;
   width: 280px;
   height: 100%;
   display: grid;
@@ -9,7 +9,12 @@
   grid-template-rows: repeat(3, auto);
 
   @media (min-width: $tablet-width) {
+    padding: 0 37px 40px;
     width: 324px;
+    gap: 21px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 220px 1fr auto;
+
     background-color: $bg-primary-color;
   }
 
@@ -19,6 +24,8 @@
 }
 
 .product-card--more {
+  display: flex;
+  flex-direction: column;
   background-color: $bg-basic-color;
 
   @media (min-width: $tablet-width) {
@@ -30,6 +37,10 @@
   // grid-area: "image";
   grid-row: 1 / -2;
   place-self: center center;
+
+  @media (min-width: $tablet-width) {
+    grid-row: unset;
+  }
 }
 
 // .product-card__image {
@@ -50,6 +61,7 @@
 
   @media (min-width: $tablet-width) {
     width: 150px;
+    justify-self: center;
   }
 }
 
@@ -69,15 +81,23 @@
 }
 
 .product-card__title--icon-plus {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: $card-title-secondary-color;
 
   &::before {
     @include icon(30px,30px,"plus");
+    margin-bottom: 23px;
 
     @media (min-width: $tablet-width) {
       width: 60px;
       height: 60px;
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 40px;
     }
   }
 }
@@ -99,6 +119,15 @@
 .product-card__desc-inner-wrap {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    padding: 5px 0;
+    border-bottom: 1px solid $card-separator-color;
+
+    &:last-of-type {
+      padding-bottom: 10px;
+    }
+  }
 }
 
 .product-card__desc-term {
@@ -125,5 +154,7 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
+    grid-row: unset;
+    grid-column: unset;
   }
 }
