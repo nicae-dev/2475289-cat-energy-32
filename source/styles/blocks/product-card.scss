@@ -1,14 +1,19 @@
 .product-card {
+  padding: 20px 0 25px;
   // todo Проверить, какой вариант лучше
   // width: 100%;
   width: 280px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  grid-template-rows: repeat(3, auto);
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: 324px;
     background-color: $bg-primary-color;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     width: 245px;
   }
 }
@@ -16,18 +21,22 @@
 .product-card--more {
   background-color: $bg-basic-color;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     border: 2px solid $bg-primary-color;
   }
 }
 
-// .product-card__link-image {
-// }
+.product-card__link-image {
+  // grid-area: "image";
+  grid-row: 1 / -2;
+  place-self: center center;
+}
 
 // .product-card__image {
 // }
 
 .product-card__link-title {
+  width: 90px;
   text-decoration: none;
 
   &:hover,
@@ -38,16 +47,21 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: $tablet-width) {
+    width: 150px;
+  }
 }
 
 .product-card__title {
+  margin: 0;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   color: $card-title-color;
   text-transform: uppercase;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 24px;
     text-align: center;
@@ -61,7 +75,7 @@
   &::before {
     @include icon(30px,30px,"plus");
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       width: 60px;
       height: 60px;
     }
@@ -76,19 +90,21 @@
   color: $text-secondary-color;
   text-align: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 18px;
   }
 }
 
-// .product-card__desc-inner-wrap {
-// }
+.product-card__desc-inner-wrap {
+  display: flex;
+  justify-content: space-between;
+}
 
 .product-card__desc-term {
   text-align: left;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     line-height: 20px;
   }
 }
@@ -97,13 +113,16 @@
   margin: 0;
   text-align: right;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     line-height: 20px;
   }
 }
 
 .product-card__button {
-  @media (min-width: 768px) {
+  grid-row: -2 / -1;
+  grid-column: 1 / -1;
+
+  @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
   }

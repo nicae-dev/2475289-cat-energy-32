@@ -2,6 +2,9 @@
 $font-primary: "Oswald", sans-serif;
 $font-secondary: "Lato", sans-serif;
 
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
 $text-color: #000000;
 $text-secondary-color:#444444;
 $text-with-bg-color:#ffffff;
@@ -34,6 +37,9 @@ $icon-color-hover:#68b738;
 $icon-color-active:rgba(#68b738, 0.3);
 
 $input-border: #cdcdcd;
+
+$separator-color:#d9d9d9;
+$separator-border: 1px solid $separator-color;
 
 // $basic-green: #68b738;
 // $basic-grey: #f2f2f2;

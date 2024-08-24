@@ -3,10 +3,10 @@
   background-color: $bg-primary-color;
 
   // todo почитать про сложные фоны
-  // @media (min-width: 768px) {
+  // @media (min-width: $tablet-width) {
   // }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     grid-template-columns: 500px 560px;
     grid-template-rows: repeat(4, auto);
   }
@@ -15,7 +15,7 @@
 .live-example__title {
   line-height: 40px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     line-height: 1em;
   }
 }
@@ -35,7 +35,7 @@
   align-items: center;
   gap: 20px 32px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     gap: 43px;
   }
 }
@@ -43,7 +43,7 @@
 .live-example__item {
   flex-basis: 124px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     flex-basis: 162px;
   }
 }
@@ -57,7 +57,7 @@
   text-transform: lowercase;
   color: $text-secondary-color;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 14px;
   }
 }
@@ -71,7 +71,7 @@
   text-transform: uppercase;
   color: $text-color;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 30px;
     line-height: 37px;
   }
@@ -89,7 +89,7 @@
   text-transform: uppercase;
   color: $text-color;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: auto;
     flex-direction: column;
     margin-left: auto;
@@ -97,7 +97,7 @@
     text-align: right;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     line-height: 20px;
     text-align: center;
   }
@@ -111,7 +111,7 @@
 }
 
 .live-example__slider {
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     grid-column: 2 / 3;
     grid-row: 1 / -1;
   }

@@ -11,7 +11,7 @@
   flex-flow: column wrap;
   gap: 20px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     flex-direction: row;
   }
 }
@@ -30,13 +30,13 @@
     background-color: $bg-secondary-color;
     background-size: 26px 30px;
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       width: 80px;
       height: 80px;
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: 325px;
     flex-shrink: 0;
     flex-direction: column;

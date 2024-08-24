@@ -2,7 +2,7 @@
 //    display: grid;
 //   grid-template-rows: auto auto;
 
-//   @media (min-width: 1440px) {
+//   @media (min-width: $desktop-width) {
 //     grid-template-rows: 100px auto 100px;
 //   }
 // }
@@ -15,11 +15,11 @@
   justify-content: space-between;
   background-color: $bg-basic-color;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     padding: 61px 40px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     width: 565px;
     padding: 61px 80px;
   }
@@ -44,7 +44,7 @@
   font-style: normal;
   color: $text-secondary-color;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     text-align: right;
 
     & + & {
@@ -52,7 +52,7 @@
     }
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     text-align: left;
   }
 }

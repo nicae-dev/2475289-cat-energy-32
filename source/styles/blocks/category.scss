@@ -9,11 +9,11 @@
   gap: 20px;
   font-weight: 400;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     gap: 30px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     flex-direction: row;
     gap: 80px;
   }
@@ -23,11 +23,11 @@
   padding: 21px 20px 18px;
   background-color: $bg-primary-color;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     padding: 77px 63px 53px 52px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     max-width: 570px;
   }
 }
@@ -35,12 +35,12 @@
 .category__item--slim::before {
   @include icon(67px, 53px, "slim");
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: 200px;
     height: 210px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     width: 100px;
     height: 106px;
   }
@@ -49,12 +49,12 @@
 .category__item--heavy::before {
   @include icon(67px, 53px, "heavy");
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: 268px;
     height: 200px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     width: 134px;
     height: 100px;
   }
@@ -66,7 +66,7 @@
   line-height: 37px;
   text-transform: uppercase;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 1em;
   }
@@ -76,7 +76,7 @@
   @include text();
   color: $text-secondary-color;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     color: $text-color;
   }
 }
@@ -108,7 +108,7 @@
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     gap: 25px;
     font-size: 20px;
     line-height: 1.5em;
