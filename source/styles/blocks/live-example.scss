@@ -111,6 +111,8 @@
 }
 
 .live-example__slider {
+  place-self: center center;
+
   @media (min-width: $desktop-width) {
     grid-column: 2 / 3;
     grid-row: 1 / -1;
