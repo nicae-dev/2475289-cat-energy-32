@@ -14,7 +14,7 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header main-header--nojs">
     <a class="main-header__logo logo" href="index.html">
       <picture>
         <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="70" height="59">
@@ -44,7 +44,7 @@
     </nav>
 
     <h1 class="visually-hidden">Cat Energy</h1>
-    <section class="hero">
+    <section class="main-header__hero hero">
       <h2 class="hero__title section-title">Функциональное питание для котов</h2>
       <p class="hero__desc">Занялся собой? Займись котом!</p>
       <picture>
@@ -119,19 +119,17 @@
       <div class="live-example__slider compare-slider">
         <picture>
           <source type="image/png" media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x" width="560" height="512">
-          <img class="compare-slider__image compare-slider__image--before" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" alt="Толстый кот" width="280" height="256">
+          <img class="compare-slider__image compare-slider__image--before" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" alt="Толстый кот" width="280" height="256" style="width: 50%;">
         </picture>
         <picture>
           <source type="image/png" media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x" width="560" height="512">
           <img class="compare-slider__image compare-slider__image--after" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" alt="Худой кот" width="280" height="256" style="width: 50%;">
         </picture>
-        <!-- <div class="compare-slider__control"> -->
         <button class="compare-slider__control-button" type="button">
           <span class="visually-hidden">
             Переключить вид
           </span>
         </button>
-        <!-- </div> -->
       </div>
       <!-- </div> -->
 

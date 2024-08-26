@@ -1,3 +1,5 @@
+$main-nav-separate-border: 1px solid #e6e6e6;
+
 .main-nav {
   color: $text-color;
   background-color: $bg-basic-color;
@@ -8,20 +10,26 @@
   }
 }
 
-
 .main-nav__list {
   @include list();
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
 
   @media (min-width: $tablet-width) {
+    align-items: center;
     flex-direction: row;
   }
 }
 
-// .main-nav__item {
-// }
+.main-nav__item {
+  border-collapse: collapse;
+  border-top: $main-nav-separate-border;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
 
 .main-nav__link {
   padding: 23px;

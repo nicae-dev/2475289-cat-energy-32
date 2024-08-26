@@ -1,9 +1,12 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 13px;
   text-decoration: none;
   color: #111111;
+
+  & picture {
+    display: contents;
+  }
 
   &:hover,
   &:focus {
@@ -16,9 +19,11 @@
 }
 
 .logo__image {
+
   display: block;
 }
 
 .logo__text {
   display: block;
+  // padding: 0 13px;
 }

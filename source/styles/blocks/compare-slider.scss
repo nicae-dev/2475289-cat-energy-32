@@ -1,7 +1,8 @@
 .compare-slider {
   width: 280px;
   height: 256px;
-  display: grid;
+  display: flex;
+  position: relative;
   justify-items: center;
 
   & picture {
@@ -15,9 +16,7 @@
 }
 
 .compare-slider__image {
-  grid-column: 1/-1;
-  grid-row: 1/-1;
-  background-color: $bg-primary-color;
+  display: block;
   height: 100%;
 
   object-fit: cover;
@@ -34,28 +33,23 @@
   justify-self: end;
 }
 
-.compare-slider__control {
-  grid-column: 1/-1;
-  grid-row: 1/-1;
-}
-
 .compare-slider__control-button {
-  grid-column: 1/-1;
-  grid-row: 1/-1;
   --color: #{$icon-color};
+
   display: block;
+  height: 100%;
+  width: 4px;
   padding: 0;
   color: var(--color);
   background-color: var(--color);
   border: none;
   border-radius: 2px;
-  width: 4px;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   cursor: pointer;
 
   &::after {
-    // @include icon-mask(40px,40px,"slider-control");
-    // mask-size: 24px 18px;
     @include icon-mask(24px,18px,"slider-control");
     position: absolute;
     left: 50%;
@@ -80,15 +74,10 @@
     cursor: pointer;
   }
 
-  &:hover {
-    --color: #{$icon-color-hover};
-  }
-
+  &:hover,
   &:focus-visible {
     --color: #{$icon-color-hover};
-    outline-color: var(--color);
   }
-
 
   &:active {
     --color: #{$icon-color-active};

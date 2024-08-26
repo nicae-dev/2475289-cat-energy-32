@@ -1,8 +1,20 @@
-// .main-header {
-// }
+.main-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 200px 1fr;
+  }
+}
+
+.main-header--nojs{
+
+}
 
 .main-header__logo {
   width: 100%;
+  grid-column: 1/2;
 
   &:hover,
   &:focus {
@@ -14,15 +26,26 @@
   }
 }
 
-// .main-header__nav{
+.main-header__nav {
+  grid-column: 1/-1;
+  margin-left: auto;
 
-// }
+  @media (min-width: $tablet-width) {
+    grid-column: unset;
+  }
+}
 
 
 .main-header__menu-toggle {
+  display: block;
+  grid-column: 2/3;
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  .main-header--nojs & {
+    display: none;
+  }
 
   &::before {
     @include icon(24px, 24px, "menu-open");
@@ -52,4 +75,8 @@
   @media (min-width: $tablet-width) {
     margin: 0;
   }
+}
+
+.main-header__hero {
+  grid-column: 1/-1;
 }
