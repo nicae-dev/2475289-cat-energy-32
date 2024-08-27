@@ -1,4 +1,5 @@
 .main-footer {
+  @include container;
   padding: 40px 0;
   display: grid;
   align-items: center;

@@ -45,8 +45,8 @@
   </header>
 
   <main class="main-container">
-    <h1 class="main-container__title section-title">Каталог продукции</h1>
-    <section class="catalog">
+    <h1 class="main-container__title section-title container">Каталог продукции</h1>
+    <section class="catalog container">
       <h2 class="visually-hidden">Основной каталог продукции</h2>
       <ul class="catalog__list">
         <li class="catalog__item">
@@ -270,7 +270,7 @@
     <section class="catalog-extra">
       <!-- todo подумать над именем section-subtitle -->
       <h2 class="catalog-extra__title section-subtitle">Дополнительные товары</h2>
-      <ul class="catalog-extra__list">
+      <ul class="catalog-extra__list container">
         <li class="catalog-extra__item product">
           <h3 class="product__title">Сахарозаменитель</h3>
           <p class="product__count">1 упаковка (100 г)</p>
@@ -296,16 +296,16 @@
           <button class="product__button button" type="button">Заказать</button>
         </li>
       </ul>
-      <div class="catalog-extra__promotion">
+      <div class="catalog-extra__promotion container">
         <p class="catalog-extra__promotion-text">Закажите все и получите чехол для кота в подарок!</p>
       </div>
     </section>
 
     <section class="subscribe">
       <h2 class="subscribe__title section-subtitle">Акции и новинки</h2>
-      <p class="subscribe__desc">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
+      <p class="subscribe__desc container">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
 
-      <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
+      <form class="subscribe__form container" action="https://echo.htmlacademy.ru/" method="post">
         <label class="visually-hidden" for="subscribe-form-email">Ваш e-mail</label>
         <input class="subscribe__form-input input" type="email" name="email" id="subscribe-form-email" placeholder="кuklachev@gmail.com" required>
         <button class="subscribe__form-button button" type="submit">Подписаться</button>
