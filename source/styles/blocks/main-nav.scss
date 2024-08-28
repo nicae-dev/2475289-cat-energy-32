@@ -1,14 +1,8 @@
 $main-nav-separate-border: 1px solid #e6e6e6;
 
-.main-nav {
-  color: $text-color;
-  background-color: $bg-basic-color;
+// .main-nav {
 
-  @media (min-width: $desktop-width) {
-    color: $text-with-bg-color;
-    background-color: transparent;
-  }
-}
+// }
 
 .main-nav__list {
   @include list();
@@ -16,6 +10,7 @@ $main-nav-separate-border: 1px solid #e6e6e6;
   flex-flow: column wrap;
   align-items: stretch;
   gap: 0 13px;
+  color: inherit;
 
   @media (min-width: $tablet-width) {
     align-items: center;

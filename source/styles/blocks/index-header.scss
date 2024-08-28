@@ -36,8 +36,8 @@ $hero-left-margin-desktop: 80px;
   }
 
   @media (min-width: $desktop-width) {
-    $colums: 8;
-    grid-template-columns: 1fr repeat($colums, $content-width-desktop / $colums) 1fr;
+    $columns: 8;
+    grid-template-columns: 1fr repeat($columns, calc($content-width-desktop / $columns)) 1fr;
     grid-template-rows: auto minmax(10px, auto) 1fr;
   }
 }
@@ -48,6 +48,12 @@ $hero-left-margin-desktop: 80px;
 
   @media (min-width: $tablet-width) {
     grid-column: 2/-2;
+  }
+}
+
+.index-header__main-nav {
+  @media (min-width: $desktop-width) {
+    color: $text-with-bg-color;
   }
 }
 

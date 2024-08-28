@@ -14,8 +14,8 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header main-header--nojs ">
-    <div class="main-header__logo">
+  <header class="main-header main-header--nojs container">
+    <div class=" main-header__logo">
       <a class="logo" href="index.html">
         <picture>
           <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="70" height="59">
@@ -48,7 +48,7 @@
 
   <main class="main-container">
     <h1 class="main-container__title section-title container">Каталог продукции</h1>
-    <section class="catalog container">
+    <section class="catalog">
       <h2 class="visually-hidden">Основной каталог продукции</h2>
       <ul class="catalog__list">
         <li class="catalog__item">
@@ -256,7 +256,7 @@
           </article>
         </li>
 
-        <li class="catalog__item">
+        <li class="catalog__item catalog__item--more">
           <div class="product-card product-card--more">
             <h3 class="product-card__title product-card__title--icon-plus">Показать еще 100500 товаров</h3>
             <p class="product-card__desc ">
@@ -270,7 +270,6 @@
     </section>
 
     <section class="catalog-extra">
-      <!-- todo подумать над именем section-subtitle -->
       <h2 class="catalog-extra__title section-subtitle">Дополнительные товары</h2>
       <ul class="catalog-extra__list container">
         <li class="catalog-extra__item product">

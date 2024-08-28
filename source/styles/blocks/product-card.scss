@@ -15,7 +15,7 @@ $card-separator-color: #cdcdcd;
     grid-template-columns: 1fr;
     grid-template-rows: 220px 1fr auto;
 
-    background-color: $bg-primary-color;
+    background: linear-gradient(to bottom, transparent 81px, $bg-primary-color 81px);
   }
 
   @media (min-width: $desktop-width) {
@@ -26,7 +26,7 @@ $card-separator-color: #cdcdcd;
 .product-card--more {
   display: flex;
   flex-direction: column;
-  background-color: $bg-basic-color;
+  background: $bg-basic-color;
 
   @media (min-width: $tablet-width) {
     border: 2px solid $bg-primary-color;
@@ -93,6 +93,7 @@ $card-separator-color: #cdcdcd;
     @media (min-width: $tablet-width) {
       width: 60px;
       height: 60px;
+      margin-top: 50px;
       margin-bottom: 50px;
     }
 
