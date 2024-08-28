@@ -1,9 +1,17 @@
 .main-footer {
-  @include container;
+
+  background-color: $bg-primary-color;
+
+  @media (min-width: $tablet-width) {
+    padding: 55px 0;
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+.main-footer__container {
   padding: 40px 0;
   display: grid;
   align-items: center;
-  background-color: $bg-primary-color;
 
   @media (min-width: $tablet-width) {
     padding: 55px 0;

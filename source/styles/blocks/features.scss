@@ -2,6 +2,7 @@
 // }
 
 .features__title {
+  padding-bottom: 40px;
   line-height: 40px;
 
   @media (min-width: $tablet-width) {
@@ -11,6 +12,7 @@
 
 .features__list {
   @include list();
+  padding-bottom: 49px;
   display: flex;
   flex-flow: column wrap;
   gap: 20px;

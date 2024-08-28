@@ -3,6 +3,7 @@
 
 .category__list {
   @include list();
+  padding: 20px 0;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -10,10 +11,12 @@
   font-weight: 400;
 
   @media (min-width: $tablet-width) {
+    padding: 0 0 45px;
     gap: 30px;
   }
 
   @media (min-width: $desktop-width) {
+    padding: 82px 0 71px;
     flex-direction: row;
     gap: 80px;
   }
