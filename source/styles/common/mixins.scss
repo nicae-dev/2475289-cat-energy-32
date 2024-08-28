@@ -63,15 +63,15 @@
 }
 
 @mixin container() {
-  width: $max-width-mobile;
+  width: $content-width-mobile;
   margin-left: auto;
   margin-right: auto;
 
   @media (min-width: $tablet-width) {
-    width: $max-width-tablet;
+    width: $content-width-tablet;
   }
 
   @media (min-width: $desktop-width) {
-    width: $max-width-desktop;
+    width: $content-width-desktop;
   }
 }

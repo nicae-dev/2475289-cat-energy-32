@@ -1,12 +1,23 @@
+$live-example-separator-color: #e6e6e6;
+
 .live-example {
-  display: grid;
   background-color: $bg-primary-color;
 
   // todo почитать про сложные фоны
-  // @media (min-width: $tablet-width) {
-  // }
+  @media (min-width: $tablet-width) {
+    border-top: 1px solid $live-example-separator-color;
+  }
+}
+
+.live-example__container {
+  padding: 25px 0 40px;
+
+  @media (min-width: $tablet-width) {
+    padding: 45px 0 100px;
+  }
 
   @media (min-width: $desktop-width) {
+    display: grid;
     grid-template-columns: 500px 560px;
     grid-template-rows: repeat(4, auto);
   }
@@ -14,19 +25,28 @@
 
 .live-example__title {
   margin: 0;
+  padding-bottom: 40px;
   line-height: 40px;
 
   @media (min-width: $tablet-width) {
+    padding-bottom: 60px;
     line-height: 1em;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 76px;
   }
 }
 
-// .live-example__inner-wrap {
-// }
-
 .live-example__desc {
   @include text();
+  padding-bottom: 20px;
   color: $text-secondary-color;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
 }
 
 .live-example__list {

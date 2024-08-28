@@ -1,20 +1,17 @@
+$footer-element-padding: 20px;
+$footer-element-separator: 1px solid $separator-color;
+
 .main-footer {
-
   background-color: $bg-primary-color;
-
-  @media (min-width: $tablet-width) {
-    padding: 55px 0;
-    grid-template-columns: repeat(3, auto);
-  }
 }
 
 .main-footer__container {
-  padding: 40px 0;
-  display: grid;
-  align-items: center;
+  padding: 20px 0;
 
   @media (min-width: $tablet-width) {
-    padding: 55px 0;
+    padding: 35px 0;
+    display: grid;
+    align-items: center;
     grid-template-columns: repeat(3, auto);
   }
 }
@@ -22,18 +19,27 @@
 .main-footer__logo {
   display: flex;
   justify-content: center;
+  padding: $footer-element-padding 0;
+  border-bottom: $footer-element-separator;
 
   @media (min-width: $tablet-width) {
     justify-content: start;
+    border: none;
   }
 }
 
-// .main-footer__social {
-// }
+.main-footer__social {
+  padding: $footer-element-padding 0;
+  border-bottom: $footer-element-separator;
 
-// .main-footer__partner{
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
 
-// }
+.main-footer__partner {
+  padding: $footer-element-padding 0;
+}
 
 .main-footer__partner-link {
   display: flex;

@@ -20,6 +20,11 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
+    gap: 37px max(10px, ($content-width-tablet - 325px*2 - 1));
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 37px max(10px, ($content-width-desktop - 245px*4 - 1)/4);
   }
 }
 
@@ -44,10 +49,17 @@
   }
 
   @media (min-width: $tablet-width) {
+    min-height: 280px;
     width: 325px;
+    padding-right: 80px;
     flex-shrink: 0;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    padding-right: 0;
   }
 }
 

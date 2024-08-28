@@ -6,15 +6,16 @@ $main-nav-separate-border: 1px solid #e6e6e6;
 
   @media (min-width: $desktop-width) {
     color: $text-with-bg-color;
-    background-color: $bg-secondary-color;
+    background-color: transparent;
   }
 }
 
 .main-nav__list {
   @include list();
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   align-items: stretch;
+  gap: 0 13px;
 
   @media (min-width: $tablet-width) {
     align-items: center;
@@ -54,6 +55,7 @@ $main-nav-separate-border: 1px solid #e6e6e6;
   }
 
   @media (min-width: $tablet-width) {
+    padding: 10px;
     font-size: 18px;
     line-height: 24px;
   }

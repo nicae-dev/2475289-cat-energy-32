@@ -1,8 +1,10 @@
 $hero-bg-secondary-color: rgba($bg-secondary-color, 0.85);
+$hero-left-margin-tablet: 90px;
+$hero-left-margin-desktop: 80px;
 
 .index-header {
   display: grid;
-  grid-template-columns: 1fr $max-width-mobile 1fr;
+  grid-template-columns: 1fr $content-width-mobile 1fr;
   grid-template-rows: auto auto 135px  auto;
 
   & picture {
@@ -11,34 +13,43 @@ $hero-bg-secondary-color: rgba($bg-secondary-color, 0.85);
 
   &::after {
     content: "";
-    height: 100%;
+    // height: 100%;
     grid-row: 2/4;
     grid-column: 1/-1;
     z-index: -1;
     background: $hero-bg-secondary-color;
 
     @media (min-width: $tablet-width) {
-      background: $bg-basic-color;
+      grid-area: none;
     }
 
     @media (min-width: $desktop-width) {
-      background:
-        linear-gradient(
-          to left,
-          $hero-bg-secondary-color 50%,
-          $bg-basic-color 50%
-        );
+      grid-row: 1/-1;
+      grid-column: 6/-1;
+      background: $hero-bg-secondary-color;
     }
   }
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 1fr $max-width-tablet 1fr;
+    grid-template-columns: 1fr $content-width-tablet 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  @media (min-width: $desktop-width) {
+    $colums: 8;
+    grid-template-columns: 1fr repeat($colums, $content-width-desktop / $colums) 1fr;
+    grid-template-rows: auto minmax(10px, auto) 1fr;
   }
 }
 
 .index-header__main-header {
+  color: ;
   grid-column: 1/-1;
   grid-row: 1/2;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2/-2;
+  }
 }
 
 .index-header__hero-text-wrap {
@@ -50,6 +61,13 @@ $hero-bg-secondary-color: rgba($bg-secondary-color, 0.85);
   @media (min-width: $tablet-width) {
     color: $text-color;
     text-align: left;
+    margin-left: $hero-left-margin-tablet;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2/6;
+
+    margin-left: $hero-left-margin-desktop;
   }
 }
 
@@ -58,9 +76,14 @@ $hero-bg-secondary-color: rgba($bg-secondary-color, 0.85);
   padding: 25px 0;
   line-height: 1em;
   color: inherit;
+
+  @media (min-width: $desktop-width) {
+    padding: 110px 0 40px;
+  }
 }
 
 .index-header__hero-desc {
+  margin: 0;
   padding-bottom: 29px;
   font-size: 14px;
   font-weight: 400;
@@ -75,10 +98,29 @@ $hero-bg-secondary-color: rgba($bg-secondary-color, 0.85);
 
 .index-header__hero-image {
   padding-bottom: 3px;
-  grid-column: 2/3;
+  grid-column: 2/-2;
   grid-row: 3/5;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 29px;
+    grid-column: 5/-1;
+    grid-row: 2/-1;
+  }
 }
 
 .index-header__hero-button {
-  grid-column: 2/3;
+  grid-column: 2/-2;
+
+  @media (min-width: $tablet-width) {
+    grid-row: 3/4;
+    place-self: start start;
+    margin-top: 29px;
+    margin-left: $hero-left-margin-tablet;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2/5;
+    margin-top: unset;
+    margin-left: $hero-left-margin-desktop;
+  }
 }

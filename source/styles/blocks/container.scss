@@ -1,13 +1,3 @@
 .container {
-  width: $max-width-mobile;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media (min-width: $tablet-width) {
-    width: $max-width-tablet;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: $max-width-desktop;
-  }
+  @include container;
 }
