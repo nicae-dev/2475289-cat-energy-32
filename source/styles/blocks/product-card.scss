@@ -114,6 +114,7 @@ $card-separator-color: #cdcdcd;
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 18px;
+    flex-grow: 1;
   }
 }
 

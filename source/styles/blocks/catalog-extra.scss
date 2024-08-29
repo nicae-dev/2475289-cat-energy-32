@@ -1,3 +1,5 @@
+$catalog-separator-color:#cdcdcd;
+
 // .catalog-extra {
 // }
 
@@ -5,20 +7,78 @@
 
 // }
 
-.catalog-extra__list {
-  @include list();
+.catalog-extra__inner-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  @media (min-width: $tablet-width) {
+    gap: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-flow: row wrap;
+    gap: 80px;
+  }
 }
 
-// .catalog-extra__item {
-// }
+.catalog-extra__list {
+  @include list();
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.catalog-extra__item {
+  border-top: 1px solid $catalog-separator-color;
+  padding: 13px 0 19px;
+
+  &:last-of-type {
+    border-bottom: 1px solid $catalog-separator-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 27px 38px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
+    border: 1px solid $catalog-separator-color;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 15px 0 17px;
+  }
+}
 
 
 .catalog-extra__promotion {
-  background-color: rgba($bg-secondary-color, 0.85);
-  // background-image: url("../../images/promotion_cat_background-mobile@1x.jpg");
+  background:
+    url("../../images/promotion_cat_background-mobile@1x.jpg"),
+    rgba($bg-secondary-color, 0.85);
+  // background-blend-mode: multiply;background-blend-mode
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 290px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    min-height: 288px;
+  }
 }
 
 .catalog-extra__promotion-text {
+  margin: 0;
+  padding: 43px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: $font-secondary;
   font-size: 16px;
   font-weight: 400;
@@ -28,6 +88,8 @@
 
   &::before {
     @include icon(78px,81px,"gift");
+    margin-top: 15px;
+    margin-bottom: 48px;
   }
 
   @media (min-width: $tablet-width) {

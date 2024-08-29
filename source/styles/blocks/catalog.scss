@@ -25,7 +25,10 @@ $catalog-separator-color:#ebebeb;
   display: flex;
   justify-content: center;
   border-top: 1px solid $catalog-separator-color;
-  border-bottom: 1px solid $catalog-separator-color;
+
+  &:last-of-type {
+    border-bottom: 1px solid $catalog-separator-color;
+  }
 
   @media (min-width: $tablet-width) {
     width: unset;
