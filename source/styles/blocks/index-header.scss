@@ -82,8 +82,13 @@ $hero-left-margin-desktop: 80px;
   line-height: 1em;
   color: inherit;
 
+  @media (min-width: $tablet-width) {
+    padding: 40px 0;
+    max-width: 570px;
+  }
+
   @media (min-width: $desktop-width) {
-    padding: 110px 0 40px;
+    padding: 90px 0 40px;
   }
 }
 
@@ -107,7 +112,6 @@ $hero-left-margin-desktop: 80px;
   grid-row: 3/5;
 
   @media (min-width: $desktop-width) {
-    padding-top: 29px;
     grid-column: 5/-1;
     grid-row: 2/-1;
   }
@@ -121,6 +125,7 @@ $hero-left-margin-desktop: 80px;
     place-self: start start;
     margin-top: 29px;
     margin-left: $hero-left-margin-tablet;
+    padding-inline: 26px;
   }
 
   @media (min-width: $desktop-width) {

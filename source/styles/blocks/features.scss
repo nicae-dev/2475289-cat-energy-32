@@ -17,6 +17,7 @@
   display: flex;
   flex-flow: column wrap;
   gap: 20px;
+  counter-reset: marker 0;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
@@ -30,11 +31,13 @@
 
 .features__item {
   @include text();
+  position: relative;
   display: flex;
   // flex-flow: row wrap;
   gap: 20px;
   align-items: center;
   color: $text-secondary-color;
+  counter-increment: marker 1;
 
   &::before {
     @include icon(60px, 60px);
@@ -48,10 +51,26 @@
     }
   }
 
+  &::after {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 115px;
+      z-index: -1;
+      content: counter(marker);
+      font-family: $font-primary;
+      font-weight: 400;
+      font-size: 280px;
+      line-height: 1em;
+      color: $bg-primary-color;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     min-height: 280px;
     width: 325px;
-    padding-right: 80px;
+    padding: 40px 80px 40px 0;
     flex-shrink: 0;
     flex-direction: column;
     align-items: flex-start;

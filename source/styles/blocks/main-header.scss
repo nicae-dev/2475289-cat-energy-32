@@ -8,6 +8,15 @@
   // @media (min-width: $tablet-width) {
   //   grid-template-columns: 1fr $content-width-tablet 1fr;
   // }
+  padding: 13px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 25px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 55px 0 30px;
+  }
 }
 
 // .main-header--nojs{
@@ -22,7 +31,7 @@
 .main-header__logo {
   display: grid;
   grid-template-columns: 1fr auto;
-  padding: 13px 0 15px;
+  // padding: 13px 0 15px;
   // grid-column: 2/3;
 
   width: $content-width-mobile;
@@ -104,6 +113,11 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    width: 101px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 118px;
   }
 }
 

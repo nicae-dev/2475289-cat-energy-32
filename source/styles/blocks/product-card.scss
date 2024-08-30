@@ -19,7 +19,9 @@ $card-separator-color: #cdcdcd;
   }
 
   @media (min-width: $desktop-width) {
+    grid-template-rows: 225px 1fr auto;
     width: 245px;
+    gap: 7px;
   }
 }
 

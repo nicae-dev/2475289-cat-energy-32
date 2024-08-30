@@ -1,4 +1,5 @@
 $live-example-separator-color: #e6e6e6;
+$live-example-border-color: #cdcdcd;
 
 .live-example {
   background-color: $bg-primary-color;
@@ -6,6 +7,8 @@ $live-example-separator-color: #e6e6e6;
   // todo почитать про сложные фоны
   @media (min-width: $tablet-width) {
     border-top: 1px solid $live-example-separator-color;
+    background: linear-gradient(to top, $bg-primary-color 462px, transparent 462px);
+    // 462px
   }
 }
 
@@ -13,13 +16,13 @@ $live-example-separator-color: #e6e6e6;
   padding: 25px 0 40px;
 
   @media (min-width: $tablet-width) {
+    display: grid;
     padding: 45px 0 100px;
   }
 
   @media (min-width: $desktop-width) {
-    display: grid;
     grid-template-columns: 500px 560px;
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
   }
 }
 
@@ -40,29 +43,33 @@ $live-example-separator-color: #e6e6e6;
 
 .live-example__desc {
   @include text();
+  margin: 0;
   padding-bottom: 20px;
   color: $text-secondary-color;
 
   @media (min-width: $tablet-width) {
-    padding-top: 70px;
     padding-bottom: 70px;
   }
 }
 
 .live-example__list {
+  margin: 0;
+  margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   gap: 20px 32px;
 
   @media (min-width: $tablet-width) {
     gap: 43px;
+    justify-content: start;
   }
 }
 
 .live-example__item {
   flex-basis: 124px;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: $tablet-width) {
     flex-basis: 162px;
@@ -70,6 +77,9 @@ $live-example-separator-color: #e6e6e6;
 }
 
 .live-example__term {
+  margin: -0.8em 18px 0;
+  padding: 0 5px;
+  order: 2;
   font-family: $font-secondary;
   font-size: 12px;
   font-weight: 400;
@@ -77,13 +87,22 @@ $live-example-separator-color: #e6e6e6;
   text-align: center;
   text-transform: lowercase;
   color: $text-secondary-color;
+  background-color: $bg-primary-color;
 
   @media (min-width: $tablet-width) {
+    margin-top: -0.5em;
     font-size: 14px;
+    background-color: $bg-basic-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $bg-primary-color;
   }
 }
 
 .live-example__value {
+  padding: 14px;
+  padding-bottom: 17px;
   margin: 0;
   font-size: 24px;
   font-weight: 400;
@@ -91,6 +110,8 @@ $live-example-separator-color: #e6e6e6;
   text-align: center;
   text-transform: uppercase;
   color: $text-color;
+  border: 1px solid $live-example-border-color;
+  border-radius: 5px;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
@@ -110,7 +131,7 @@ $live-example-separator-color: #e6e6e6;
   text-transform: uppercase;
   color: $text-color;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
     width: auto;
     flex-direction: column;
     margin-left: auto;
@@ -119,8 +140,8 @@ $live-example-separator-color: #e6e6e6;
   }
 
   @media (min-width: $desktop-width) {
-    line-height: 20px;
-    text-align: center;
+    width: 365px;
+    font-size: 20px;
   }
 }
 
@@ -129,6 +150,10 @@ $live-example-separator-color: #e6e6e6;
 
 .live-example__total-value {
   margin: 0;
+
+  @media (min-width: $desktop-width) {
+    margin-inline: auto;
+  }
 }
 
 .live-example__slider {

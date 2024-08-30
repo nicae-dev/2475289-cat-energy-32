@@ -19,8 +19,11 @@
 }
 
 .logo__image {
-
   display: block;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 13px;
+  }
 }
 
 .logo__text {
