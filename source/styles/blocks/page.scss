@@ -8,4 +8,7 @@
   line-height: 18px;
   color: $text-color;
   background-color: $bg-basic-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
