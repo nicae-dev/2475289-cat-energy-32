@@ -19,8 +19,11 @@ $main-nav-separate-border: 1px solid #e6e6e6;
 }
 
 .main-nav__item {
-  border-collapse: collapse;
   border-top: $main-nav-separate-border;
+
+  &:last-of-type {
+    border-bottom: $main-nav-separate-border;
+  }
 
   @media (min-width: $tablet-width) {
     border: none;
