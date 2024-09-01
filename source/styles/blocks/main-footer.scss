@@ -12,7 +12,7 @@ $footer-element-separator: 1px solid $separator-color;
     padding: 35px 0;
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -29,7 +29,7 @@ $footer-element-separator: 1px solid $separator-color;
 }
 
 .main-footer__social {
-  padding: $footer-element-padding 0;
+  padding: 12px 0;
   border-bottom: $footer-element-separator;
 
   @media (min-width: $tablet-width) {

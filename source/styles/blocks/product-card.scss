@@ -11,9 +11,9 @@ $card-separator-color: #cdcdcd;
   @media (min-width: $tablet-width) {
     padding: 0 37px 40px;
     width: 324px;
-    gap: 21px;
+    gap: 16px;
     grid-template-columns: 1fr;
-    grid-template-rows: 220px 1fr auto;
+    grid-template-rows: 228px 1fr auto;
 
     background: linear-gradient(to bottom, transparent 81px, $bg-primary-color 81px);
   }
@@ -32,6 +32,23 @@ $card-separator-color: #cdcdcd;
 
   @media (min-width: $tablet-width) {
     border: 2px solid $bg-primary-color;
+  }
+
+  &::before {
+    @include icon(30px,30px,"plus");
+    place-self: center;
+    margin-bottom: 23px;
+
+    @media (min-width: $tablet-width) {
+      width: 60px;
+      height: 60px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -69,6 +86,7 @@ $card-separator-color: #cdcdcd;
 
 .product-card__title {
   margin: 0;
+  margin-bottom: 14px;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -76,36 +94,23 @@ $card-separator-color: #cdcdcd;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 0;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
   }
-}
 
-.product-card__title--icon-plus {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: $card-title-secondary-color;
-
-  &::before {
-    @include icon(30px,30px,"plus");
-    margin-bottom: 23px;
-
-    @media (min-width: $tablet-width) {
-      width: 60px;
-      height: 60px;
-      margin-top: 50px;
-      margin-bottom: 50px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-bottom: 40px;
-    }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 10px;
   }
 }
 
+.product-card__title--icon-plus {
+  color: $card-title-secondary-color;
+}
+
 .product-card__desc {
+  margin: 0;
   font-family: $font-secondary;
   font-size: 12px;
   font-weight: 400;
@@ -152,13 +157,19 @@ $card-separator-color: #cdcdcd;
 }
 
 .product-card__button {
+  margin-top: 20px;
   grid-row: -2 / -1;
   grid-column: 1 / -1;
 
   @media (min-width: $tablet-width) {
+    margin-top: 10px;
     font-size: 16px;
     line-height: 20px;
     grid-row: unset;
     grid-column: unset;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 25px;
   }
 }

@@ -131,7 +131,7 @@ $live-example-border-color: #cdcdcd;
   text-transform: uppercase;
   color: $text-color;
 
-  @media (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
     width: auto;
     flex-direction: column;
     margin-left: auto;

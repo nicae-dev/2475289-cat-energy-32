@@ -3,7 +3,13 @@ $font-primary: "Oswald", sans-serif;
 $font-secondary: "Lato", sans-serif;
 
 $tablet-width: 768px;
+$mobile-width-max: calc($tablet-width - 1px);
 $desktop-width: 1440px;
+$tablet-width-max: calc($desktop-width - 1px);
+
+$content-width-mobile: 280px;
+$content-width-tablet: 708px;
+$content-width-desktop: 1220px;
 
 $text-color: #000000;
 $text-secondary-color:#444444;
@@ -40,10 +46,6 @@ $input-border: #cdcdcd;
 
 $separator-color:#d9d9d9;
 $separator-border: 1px solid $separator-color;
-
-$content-width-mobile: 280px;
-$content-width-tablet: 708px;
-$content-width-desktop: 1220px;
 
 // $basic-green: #68b738;
 // $basic-grey: #f2f2f2;

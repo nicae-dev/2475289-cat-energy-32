@@ -28,7 +28,8 @@ $main-nav-separate-border: 1px solid #e6e6e6;
 }
 
 .main-nav__link {
-  padding: 23px;
+  --padding: 23px;
+  padding: var(--padding);
   display: block;
   font-size: 20px;
   font-weight: 400;
@@ -50,7 +51,8 @@ $main-nav-separate-border: 1px solid #e6e6e6;
   }
 
   @media (min-width: $tablet-width) {
-    padding: 10px;
+    --padding: 10px;
+    position: relative;
     font-size: 18px;
     line-height: 24px;
   }
@@ -61,5 +63,16 @@ $main-nav-separate-border: 1px solid #e6e6e6;
   }
 }
 
-// .main-nav__link--current {
-// }
+.main-nav__link--current::after {
+  @media (min-width: $tablet-width) {
+    content: "";
+    display: block;
+    position: absolute;
+    width: auto;
+    height: 2px;
+    bottom: 0;
+    left: var(--padding);
+    right: var(--padding);
+    background-color: $bg-secondary-color;
+  }
+}

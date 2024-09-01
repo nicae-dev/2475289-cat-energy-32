@@ -30,7 +30,7 @@
   background-color: $bg-primary-color;
   align-items: center;
 
-  @media (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
     &::before {
       grid-column: 2/3;
       grid-row: 1/-1;
@@ -99,7 +99,7 @@
   margin: 0;
   color: $text-secondary-color;
 
-  @media (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
     grid-area: unset;
   }
 
@@ -139,7 +139,7 @@
     }
   }
 
-  @media (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
     grid-area: unset;
     justify-self: start;
   }

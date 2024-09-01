@@ -14,8 +14,8 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header main-header--nojs container">
-    <div class=" main-header__logo">
+  <header class="main-header main-header--nojs">
+    <div class="main-header__logo">
       <a class="logo" href="index.html">
         <picture>
           <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="70" height="59">
@@ -27,17 +27,17 @@
           <img class="main-header__logo-text logo__text" src="images/logo-text-mobile.svg" alt="Cat Energy" width="101" height="18">
         </picture>
       </a>
-      <button class="main-header__menu-toggle main-header__menu-toggle--close" type="button">
+      <button class="main-header__menu-toggle main-header__menu-toggle--open" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
     </div>
-    <nav class="main-header__nav main-nav">
+    <nav class="main-header__nav main-nav main-header__nav--open">
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--current main-header__nav-link" href="index.html">Главная</a>
+          <a class="main-nav__link" href="index.html">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="catalog.html" aria-current="page">Каталог продукции</a>
+          <a class="main-nav__link main-nav__link--current" href="catalog.html" aria-current="page">Каталог продукции</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="program.html">Подбор программы</a>
@@ -299,7 +299,7 @@
           </li>
         </ul>
         <div class="catalog-extra__promotion">
-          <p class="catalog-extra__promotion-text">Закажите все и получите чехол для кота в подарок!</p>
+          <p class="catalog-extra__promotion-text">Закажите все<br>и получите чехол для<br>кота в подарок!</p>
         </div>
       </div>
 
@@ -316,8 +316,8 @@
       </form>
     </section>
 
-    <section class="contacts">
-      <div class="contacts__inner-wrap contacts__inner-wrap--with-bg ">
+    <section class="contacts contacts--with-bg">
+      <div class="contacts__inner-wrap">
         <h2 class="contacts__title">Приглашаем<br>к сотрудничеству <br>дилеров!</h2>
         <address>
           <p class="contacts__address">ул. Большая <br>Конюшенная, д. 19/8</p>

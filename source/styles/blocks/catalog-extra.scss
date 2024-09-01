@@ -41,7 +41,7 @@ $catalog-separator-color:#cdcdcd;
     padding: 27px 38px;
   }
 
-  @media (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
     border: 1px solid $catalog-separator-color;
     border-bottom: none;
   }
