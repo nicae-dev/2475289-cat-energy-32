@@ -13,24 +13,22 @@
   }
 }
 
-// .main-header--nojs{
-
-// }
-
-// .main-header--is-open{
-
-// }
-
-
-.main-header__logo {
+.main-header__logo-wrapper {
   display: grid;
   grid-template-columns: 1fr auto;
-  padding-bottom: 13px;
-
   width: $content-width-mobile;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 13px;
 
+  @media (min-width: $tablet-width) {
+    width: unset;
+    padding-bottom: 0;
+    margin: 0;
+  }
+}
+
+.main-header__logo {
   &:hover,
   &:focus {
     opacity: 0.8;
@@ -38,12 +36,6 @@
 
   &:active {
     opacity: 0.6;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: unset;
-    padding-bottom: 0;
-    margin: 0;
   }
 }
 
