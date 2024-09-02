@@ -24,9 +24,13 @@ $catalog-separator-color:#cdcdcd;
 
 .catalog-extra__list {
   @include list();
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+
+  //todo
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
 }
 
 .catalog-extra__item {
@@ -53,10 +57,8 @@ $catalog-separator-color:#cdcdcd;
 
 
 .catalog-extra__promotion {
-  background:
-    url("../../images/promotion_cat_background-mobile@1x.jpg"),
-    rgba($bg-secondary-color, 0.85);
-  // background-blend-mode: multiply;background-blend-mode
+  background-color: rgba($bg-secondary-color, 0.85);
+  background-image: linear-gradient(rgba($bg-secondary-color, 0.85), rgba($bg-secondary-color, 0.85)), url("../../images/promotion_cat_background-mobile@1x.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

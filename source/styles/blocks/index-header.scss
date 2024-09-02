@@ -12,21 +12,24 @@ $hero-left-margin-desktop: 80px;
   }
 
   &::after {
+    --image: url("../../images/hero-background-mobile@1x.jpg");
     content: "";
-    // height: 100%;
     grid-row: 2/4;
     grid-column: 1/-1;
     z-index: -1;
-    background: $hero-bg-secondary-color;
+    background: linear-gradient($hero-bg-secondary-color, $hero-bg-secondary-color), var(--image), linear-gradient(to bottom left, #3f3e43, #525157);
+    background-repeat: no-repeat;
+    background-position: center;
 
     @media (min-width: $tablet-width) {
       grid-area: none;
     }
 
     @media (min-width: $desktop-width) {
+      --image: url("../../images/hero-background-desktop@1x.jpg");
       grid-row: 1/-1;
       grid-column: 6/-1;
-      background: $hero-bg-secondary-color;
+      background-position: left bottom;
     }
   }
 
