@@ -1,8 +1,9 @@
 .main-header {
   position: relative;
+  padding: 13px 0 0;
   display: flex;
   flex-wrap: wrap;
-  padding: 13px 0 0;
+  align-items: flex-start;
 
   @media (min-width: $tablet-width) {
     padding: 25px 0;
@@ -68,14 +69,18 @@
 
   .main-header--nojs & {
     position: static;
+    width: auto;
   }
 
   @media (max-width: $mobile-width-max) {
     position: absolute;
     top: 64px;
-    left: 0;
-    right: 0;
+    // left: 0;
+    // right: 0;
     background-color: $bg-basic-color;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
   }
 }
 
