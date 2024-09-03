@@ -20,6 +20,7 @@ $live-example-border-color: #cdcdcd;
     grid-template-rows: repeat(3, auto);
     background: $bg-primary-color;
     border-top: none;
+    padding-bottom: 50px;
 
     &::before {
       content: "";
@@ -29,20 +30,6 @@ $live-example-border-color: #cdcdcd;
     }
   }
 }
-/*
-.live-example__container {
-  padding: 25px 0 40px;
-
-  @media (min-width: $tablet-width) {
-    display: grid;
-    padding: 45px 0 100px;
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-template-columns: 500px 560px;
-    grid-template-rows: repeat(3, auto);
-  }
-} */
 
 .live-example__title {
   grid-column: 2/3;
@@ -88,6 +75,10 @@ $live-example-border-color: #cdcdcd;
     gap: 43px;
     justify-content: start;
   }
+
+  @media (min-width: $desktop-width) {
+    gap: 54px 43px;
+  }
 }
 
 .live-example__item {
@@ -101,8 +92,8 @@ $live-example-border-color: #cdcdcd;
 }
 
 .live-example__term {
-  margin: -0.8em 18px 0;
-  padding: 0 5px;
+  margin: -0.8em 0 0;
+  padding: 0 4px;
   order: 2;
   font-family: $font-secondary;
   font-size: 12px;
@@ -182,11 +173,12 @@ $live-example-border-color: #cdcdcd;
 
 .live-example__slider {
   grid-column: 2/3;
-  place-self: center center;
+  justify-self: center;
 
   @media (min-width: $desktop-width) {
     grid-column: 3 / 4;
     grid-row: 1 / -1;
-    place-self: center right;
+    justify-self: right;
+    margin-top: 45px;
   }
 }

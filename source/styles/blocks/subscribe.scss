@@ -43,6 +43,10 @@
   @media (min-width: $tablet-width) {
     min-width: 376px;
   }
+
+  @media (min-width: $desktop-width) {
+    min-width: 496px;
+  }
 }
 
 .subscribe__form-button {

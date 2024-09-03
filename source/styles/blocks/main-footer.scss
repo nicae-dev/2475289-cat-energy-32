@@ -6,13 +6,15 @@ $footer-element-separator: 1px solid $separator-color;
 }
 
 .main-footer__container {
-  padding: 20px 0;
-
   @media (min-width: $tablet-width) {
     padding: 35px 0;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 51px 0;
   }
 }
 

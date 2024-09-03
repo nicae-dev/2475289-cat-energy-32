@@ -47,6 +47,7 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 152px 1fr;
+    gap: 10px;
     padding: 47px 52px 55px;
     max-width: 570px;
   }
@@ -63,6 +64,7 @@
   @media (min-width: $desktop-width) {
     width: 100px;
     height: 106px;
+    margin-top: -6px;
   }
 }
 
@@ -111,6 +113,7 @@
 
   @media (min-width: $tablet-width) {
     color: $text-color;
+    padding-top: 30px;
   }
 }
 
