@@ -1,7 +1,7 @@
 .product {
   display: grid;
   grid-template-areas: "title title" "count price" "button button";
-  gap: 15px;
+  gap: 14px 15px;
   align-items: center;
 
   @media (min-width: $tablet-width) {

@@ -10,8 +10,14 @@
   }
 }
 
-// .subscribe__title {
-// }
+.subscribe__title {
+  margin-bottom: 8px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
 
 .subscribe__desc {
   margin: 0;
