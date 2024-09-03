@@ -2,16 +2,34 @@ $live-example-separator-color: #e6e6e6;
 $live-example-border-color: #cdcdcd;
 
 .live-example {
+  display: grid;
+  grid-template-columns: 1fr $content-width-mobile 1fr;
   background-color: $bg-primary-color;
+  padding: 25px 0 40px;
 
   // todo почитать про сложные фоны
   @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr $content-width-tablet 1fr;
+    padding: 0 0 100px;
     border-top: 1px solid $live-example-separator-color;
     background: linear-gradient(to top, $bg-primary-color 462px, transparent 462px);
-    // 462px
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 433px calc($content-width-desktop - 433px) 1fr;
+    grid-template-rows: repeat(3, auto);
+    background: $bg-primary-color;
+    border-top: none;
+
+    &::before {
+      content: "";
+      grid-column: 1/-1;
+      grid-row: 2/1;
+      background: $bg-basic-color;
+    }
   }
 }
-
+/*
 .live-example__container {
   padding: 25px 0 40px;
 
@@ -24,9 +42,11 @@ $live-example-border-color: #cdcdcd;
     grid-template-columns: 500px 560px;
     grid-template-rows: repeat(3, auto);
   }
-}
+} */
 
 .live-example__title {
+  grid-column: 2/3;
+  grid-row: 1/2;
   margin: 0;
   padding-bottom: 40px;
   line-height: 40px;
@@ -38,21 +58,25 @@ $live-example-border-color: #cdcdcd;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 76px;
+    padding-top: 45px;
   }
 }
 
 .live-example__desc {
   @include text();
+  grid-column: 2/3;
   margin: 0;
   padding-bottom: 20px;
   color: $text-secondary-color;
 
   @media (min-width: $tablet-width) {
+    padding-top: 70px;
     padding-bottom: 70px;
   }
 }
 
 .live-example__list {
+  grid-column: 2/3;
   margin: 0;
   margin-bottom: 20px;
   display: flex;
@@ -157,10 +181,12 @@ $live-example-border-color: #cdcdcd;
 }
 
 .live-example__slider {
+  grid-column: 2/3;
   place-self: center center;
 
   @media (min-width: $desktop-width) {
-    grid-column: 2 / 3;
+    grid-column: 3 / 4;
     grid-row: 1 / -1;
+    place-self: center right;
   }
 }
