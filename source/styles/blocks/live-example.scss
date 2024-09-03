@@ -92,8 +92,8 @@ $live-example-border-color: #cdcdcd;
 }
 
 .live-example__term {
-  margin: -0.8em 0 0;
-  padding: 0 4px;
+  margin: -0.8em 4px 0;
+  padding: 0 10px;
   order: 2;
   font-family: $font-secondary;
   font-size: 12px;
@@ -103,9 +103,11 @@ $live-example-border-color: #cdcdcd;
   text-transform: lowercase;
   color: $text-secondary-color;
   background-color: $bg-primary-color;
+  display: block;
+  align-self: center;
 
   @media (min-width: $tablet-width) {
-    margin-top: -0.5em;
+    margin: -0.5em 0 0;
     font-size: 14px;
     background-color: $bg-basic-color;
   }
