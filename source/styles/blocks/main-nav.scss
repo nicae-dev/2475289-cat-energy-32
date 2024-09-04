@@ -1,56 +1,37 @@
-.main-nav {
-  color: $text-color;
-  background-color: $bg-basic-color;
+$main-nav-separate-border: 1px solid #e6e6e6;
 
-  @media (min-width: 1440px) {
-    color: $text-with-bg-color;
-    background-color: $bg-secondary-color;
-  }
-}
+// .main-nav {
 
-.main-nav__toggle {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-
-  &::before {
-    @include icon(24px, 24px, "menu-open");
-  }
-
-  &:hover,
-  &:focus-visible {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-
-  @media (min-width: 768px) {
-    display: none;
-  }
-}
-
-.main-nav__toggle--close::before {
-  @include icon-bg-image("menu-close");
-}
+// }
 
 .main-nav__list {
   @include list();
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  color: inherit;
 
-  @media (min-width: 768px) {
-    flex-direction: row;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0 13px;
+    align-items: center;
+    justify-content: end;
   }
 }
 
-// .main-nav__item {
-// }
+.main-nav__item {
+  border-top: $main-nav-separate-border;
+
+  &:where(:last-of-type) {
+    border-bottom: $main-nav-separate-border;
+  }
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
 
 .main-nav__link {
-  padding: 23px;
+  --padding: 23px;
+  padding: var(--padding);
   display: block;
   font-size: 20px;
   font-weight: 400;
@@ -71,16 +52,35 @@
     opacity: 0.3;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
+    --padding: 10px;
+    position: relative;
     font-size: 18px;
     line-height: 24px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
   }
 }
 
-// .main-nav__link--current {
-// }
+.main-nav__link--current::after {
+  @media (min-width: $tablet-width) {
+    content: "";
+    display: block;
+    position: absolute;
+    width: auto;
+    height: 2px;
+    bottom: 0;
+    left: var(--padding);
+    right: var(--padding);
+    background-color: $bg-secondary-color;
+  }
+}
+
+.main-nav__link--current-with-bg::after {
+  @media (min-width: $desktop-width) {
+    background-color: currentColor;
+  }
+}

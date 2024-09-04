@@ -1,6 +1,12 @@
 .logo {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: #111111;
+
+  & picture {
+    display: contents;
+  }
 
   &:hover,
   &:focus {
@@ -12,9 +18,15 @@
   }
 }
 
-// .logo__image {
-// }
+.logo__image {
+  display: block;
 
-// .logo__text {
+  @media (min-width: $tablet-width) {
+    margin-right: 13px;
+  }
+}
 
-// }
+.logo__text {
+  display: block;
+  // padding: 0 13px;
+}
