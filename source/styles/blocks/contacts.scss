@@ -22,8 +22,9 @@
   padding: 26px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
+  // grid-template-rows: auto auto;
   justify-content: space-between;
+  align-items: center;
   background-color: inherit;
   z-index: 2;
 
@@ -86,7 +87,7 @@
   height: 362px;
 
   @media (min-width: $tablet-width) {
-    min-height: 400px;
+    height: 400px;
   }
 
   @media (min-width: $desktop-width) {
@@ -99,4 +100,8 @@
 .contacts__map-image {
   display: block;
   margin-inline: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
