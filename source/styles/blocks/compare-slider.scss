@@ -26,11 +26,13 @@
 .compare-slider__image--before {
   object-position: left;
   justify-self: start;
+  width: 50%;
 }
 
 .compare-slider__image--after {
   object-position: right;
   justify-self: end;
+  width: 50%;
 }
 
 .compare-slider__control-button {

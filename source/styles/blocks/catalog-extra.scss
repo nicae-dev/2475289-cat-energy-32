@@ -36,7 +36,6 @@ $catalog-separator-color:#cdcdcd;
 .catalog-extra__list {
   @include list();
 
-  //todo
   @media (min-width: $desktop-width) {
     display: flex;
     flex-direction: column;

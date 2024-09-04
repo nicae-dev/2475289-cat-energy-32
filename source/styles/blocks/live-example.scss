@@ -8,7 +8,6 @@ $live-example-bg-color-start: #eaeaea;
   background-color: $live-example-bg-color-start;
   padding: 25px 0 40px;
 
-  // todo почитать про сложные фоны
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr $content-width-tablet 1fr;
     padding: 0 0 100px;
