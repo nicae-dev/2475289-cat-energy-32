@@ -46,7 +46,7 @@ $hero-left-margin-desktop: 80px;
     @media (min-width: $desktop-width) {
       @include index-bg-image("desktop");
       grid-row: 1/-1;
-      grid-column: 6/-1;
+      grid-column: 5/-1;
       background-position: left bottom;
     }
 
@@ -62,8 +62,11 @@ $hero-left-margin-desktop: 80px;
   }
 
   @media (min-width: $desktop-width) {
-    $columns: 8;
-    grid-template-columns: 1fr repeat($columns, calc($content-width-desktop / $columns)) 1fr;
+    $column-middle2: 60px;
+    $column-middle3: 100px;
+    $column-middle1: ($content-width-desktop / 2 - $column-middle2 - $column-middle3);
+    $column-middle4: ($content-width-desktop / 2);
+    grid-template-columns: 1fr $column-middle1 $column-middle2 $column-middle3 $column-middle4 1fr;
     grid-template-rows: auto auto 1fr;
     min-height: 694px;
   }
@@ -98,7 +101,7 @@ $hero-left-margin-desktop: 80px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 2/6;
+    grid-column: 2/4;
 
     margin-left: $hero-left-margin-desktop;
   }
@@ -140,7 +143,7 @@ $hero-left-margin-desktop: 80px;
   grid-row: 3/5;
 
   @media (min-width: $desktop-width) {
-    grid-column: 5/-1;
+    grid-column: 3/-1;
     grid-row: 2/-1;
   }
 }
@@ -157,7 +160,7 @@ $hero-left-margin-desktop: 80px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 2/5;
+    grid-column: 2/4;
     margin-left: $hero-left-margin-desktop;
   }
 }
