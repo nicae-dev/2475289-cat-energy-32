@@ -1,7 +1,7 @@
 $catalog-separator-color:#cdcdcd;
 
 .catalog-extra {
-  padding: 10px 0;
+  padding: 10px 0 15px;
 
   @media (min-width: $tablet-width) {
     padding: 40px 0;
@@ -9,10 +9,12 @@ $catalog-separator-color:#cdcdcd;
 }
 
 .catalog-extra__title {
-  margin: 15px auto 25px 0;
+  margin-top: 14px;
+  margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
-    margin: 32px auto 80px 0;
+    margin-top: 35px;
+    margin-bottom: 75px;
   }
 }
 
@@ -123,15 +125,12 @@ $catalog-separator-color:#cdcdcd;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    text-align: left;
     height: 100%;
+    padding: 56px 125px 56px 78px;
+    text-align: left;
 
     &::before {
       margin: 0;
     }
-  }
-
-  @media (min-width: $tablet-width) {
-    padding: 56px 125px 56px 78px;
   }
 }
