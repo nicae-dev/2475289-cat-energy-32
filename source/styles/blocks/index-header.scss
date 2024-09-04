@@ -64,8 +64,8 @@ $hero-left-margin-desktop: 80px;
   @media (min-width: $desktop-width) {
     $column-middle2: 60px;
     $column-middle3: 100px;
-    $column-middle1: ($content-width-desktop / 2 - $column-middle2 - $column-middle3);
-    $column-middle4: ($content-width-desktop / 2);
+    $column-middle1: calc($content-width-desktop / 2 - $column-middle2 - $column-middle3);
+    $column-middle4: calc($content-width-desktop / 2);
     grid-template-columns: 1fr $column-middle1 $column-middle2 $column-middle3 $column-middle4 1fr;
     grid-template-rows: auto auto 1fr;
     min-height: 694px;
