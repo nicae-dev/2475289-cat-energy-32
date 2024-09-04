@@ -49,6 +49,11 @@ $hero-left-margin-desktop: 80px;
       grid-column: 6/-1;
       background-position: left bottom;
     }
+
+    /* фото кота справа обрезано, поэтому после ширины 2040px прижмем его вправо */
+    @media (min-width: 2040px) {
+      background-position: right bottom;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -60,7 +65,6 @@ $hero-left-margin-desktop: 80px;
     $columns: 8;
     grid-template-columns: 1fr repeat($columns, calc($content-width-desktop / $columns)) 1fr;
     grid-template-rows: auto auto 1fr;
-    // grid-template-rows: minmax(10px, auto) minmax(10px, auto) minmax(10px, auto);
     min-height: 694px;
   }
 }
@@ -118,7 +122,7 @@ $hero-left-margin-desktop: 80px;
 
 .index-header__hero-desc {
   margin: 0;
-  padding-bottom: 29px;
+  padding-bottom: 25px;
   font-size: 14px;
   font-weight: 400;
   line-height: 1em;

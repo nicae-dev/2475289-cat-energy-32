@@ -3,19 +3,22 @@ $footer-element-separator: 1px solid $separator-color;
 
 .main-footer {
   background-color: $bg-primary-color;
-  padding-top: 16px;
+  padding: 16px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 38px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 49px 0;
+  }
 }
 
 .main-footer__container {
   @media (min-width: $tablet-width) {
-    padding: 35px 0;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 51px 0;
   }
 }
 

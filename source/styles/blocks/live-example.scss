@@ -1,10 +1,11 @@
 $live-example-separator-color: #e6e6e6;
 $live-example-border-color: #cdcdcd;
+$live-example-bg-color-start: #eaeaea;
 
 .live-example {
   display: grid;
   grid-template-columns: 1fr $content-width-mobile 1fr;
-  background-color: $bg-primary-color;
+  background-color: $live-example-bg-color-start;
   padding: 25px 0 40px;
 
   // todo почитать про сложные фоны
@@ -12,7 +13,7 @@ $live-example-border-color: #cdcdcd;
     grid-template-columns: 1fr $content-width-tablet 1fr;
     padding: 0 0 100px;
     border-top: 1px solid $live-example-separator-color;
-    background: linear-gradient(to top, $bg-primary-color 462px, transparent 462px);
+    background: linear-gradient(to top, $bg-primary-color 462px, $bg-basic-color 462px);
   }
 
   @media (min-width: $desktop-width) {
@@ -39,13 +40,14 @@ $live-example-border-color: #cdcdcd;
   line-height: 40px;
 
   @media (min-width: $tablet-width) {
+    padding-top: 45px;
     padding-bottom: 60px;
     line-height: 1em;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     padding-bottom: 76px;
-    padding-top: 45px;
+    padding-top: 48px;
   }
 }
 
@@ -57,6 +59,10 @@ $live-example-border-color: #cdcdcd;
   color: $text-secondary-color;
 
   @media (min-width: $tablet-width) {
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
     padding-top: 70px;
     padding-bottom: 70px;
   }
@@ -65,19 +71,21 @@ $live-example-border-color: #cdcdcd;
 .live-example__list {
   grid-column: 2/3;
   margin: 0;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px 32px;
 
   @media (min-width: $tablet-width) {
+    padding-bottom: 100px;
     gap: 43px;
     justify-content: start;
   }
 
   @media (min-width: $desktop-width) {
     gap: 54px 43px;
+    padding-bottom: 25px;
   }
 }
 
@@ -92,7 +100,7 @@ $live-example-border-color: #cdcdcd;
 }
 
 .live-example__term {
-  margin: -0.8em 4px 0;
+  margin: -0.8em 19px 0;
   padding: 0 10px;
   order: 2;
   font-family: $font-secondary;
@@ -102,7 +110,7 @@ $live-example-border-color: #cdcdcd;
   text-align: center;
   text-transform: lowercase;
   color: $text-secondary-color;
-  background-color: $bg-primary-color;
+  background-color: $live-example-bg-color-start;
   display: block;
   align-self: center;
 

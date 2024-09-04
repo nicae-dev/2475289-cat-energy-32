@@ -1,6 +1,6 @@
 /* здесь используйте глобальные переменные */
-$font-primary: "Oswald", sans-serif;
-$font-secondary: "Lato", sans-serif;
+$font-primary: "Oswald", "Arial", sans-serif;
+$font-secondary: "Lato", "Arial", sans-serif;
 
 $tablet-width: 768px;
 $mobile-width-max: calc($tablet-width - 1px);

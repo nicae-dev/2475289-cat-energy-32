@@ -130,4 +130,8 @@ $catalog-separator-color:#cdcdcd;
       margin: 0;
     }
   }
+
+  @media (min-width: $tablet-width) {
+    padding: 56px 125px 56px 78px;
+  }
 }
