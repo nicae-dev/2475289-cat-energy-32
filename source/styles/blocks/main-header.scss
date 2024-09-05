@@ -90,7 +90,6 @@
 }
 
 .main-header__nav--open {
-  // display: block;
   visibility: visible;
   opacity: 1;
   height: auto;
@@ -98,7 +97,7 @@
 
   @media (max-width: $mobile-width-max) {
     position: absolute;
-    top: 64px;
+    top: 66px;
     left: 0;
     right: 0;
     background-color: $bg-basic-color;
