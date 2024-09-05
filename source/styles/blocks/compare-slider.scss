@@ -50,6 +50,8 @@
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
+  transition: background-color $time;
+
 
   &::after {
     @include icon-mask(24px,18px,"slider-control");
@@ -59,6 +61,7 @@
     transform: translate(-50%, -50%);
     background-color: var(--color);
     cursor: pointer;
+    transition: background-color $time;
   }
 
   &::before {
@@ -74,6 +77,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
+    transition: background-color $time, border-color $time;
   }
 
   &:hover,

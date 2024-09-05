@@ -35,11 +35,12 @@ $main-nav-separate-border: 1px solid #e6e6e6;
   display: block;
   font-size: 20px;
   font-weight: 400;
-  line-height: 1em;
+  line-height: 1.2em;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
   color: inherit;
+  transition: opacity $time;
 
   &:hover,
   &:focus-visible {

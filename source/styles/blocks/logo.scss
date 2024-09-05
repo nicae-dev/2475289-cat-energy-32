@@ -3,6 +3,7 @@
   align-items: center;
   text-decoration: none;
   color: #111111;
+  transition: color $time;
 
   & picture {
     display: contents;
