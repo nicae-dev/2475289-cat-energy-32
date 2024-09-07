@@ -2,19 +2,23 @@
 $font-primary: "Oswald", "Arial", sans-serif;
 $font-secondary: "Lato", "Arial", sans-serif;
 
+//размеры экранов
 $tablet-width: 768px;
 $mobile-width-max: calc($tablet-width - 1px);
 $desktop-width: 1440px;
 $tablet-width-max: calc($desktop-width - 1px);
 
+//размеры контента
 $content-width-mobile: 280px;
 $content-width-tablet: 708px;
 $content-width-desktop: 1220px;
 
+//текст
 $text-color: #000000;
 $text-secondary-color:#444444;
 $text-with-bg-color:#ffffff;
 
+//фоны
 $bg-basic-color:#ffffff;
 $bg-primary-color:#f2f2f2;
 $bg-secondary-color:#68b738;
@@ -33,7 +37,9 @@ $button-secondary-bg-color: #f2f2f2;
 $button-secondary-bg-color-hover: #ebebeb;
 $button-secondary-bg-color-active: #ebebeb;
 
+//разное
 $input-color:#444444;
+$input-border: #cdcdcd;
 
 $card-title-color:#222222;
 $card-title-secondary-color:#111111;
@@ -42,17 +48,8 @@ $icon-color:#666666;
 $icon-color-hover:#68b738;
 $icon-color-active:rgba(#68b738, 0.6);
 
-$input-border: #cdcdcd;
-
 $separator-color:#d9d9d9;
 $separator-border: 1px solid $separator-color;
 
-// $basic-green: #68b738;
-// $basic-grey: #f2f2f2;
-// $special-grey-2: #ebebeb;
-// $special-grey: #cdcdcd;
-// $special-grey-2: #666666;
-// $special-dark-grey: #444444;
-// $special-dark-grey-2: #222222;
-// $status-error: #ff8282;
-// $basic-green-2: #5eaa2f;
+//переменные для плавных переходов
+$time: 0.5s;

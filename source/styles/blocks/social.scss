@@ -1,35 +1,28 @@
-// .social {
-// }
-
 .social__list {
   @include list();
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
+  gap: 0 12px;
 }
 
-// .social__item {
-// }
-
 .social__link {
-  --color: #{$icon-color};
   display: block;
-  color: var(--color);
 
   &::before {
     @include icon-mask(40px,40px);
-    background-color: var(--color);
+    background-color: $icon-color;
     mask-size: 27px 18px;
+    transition: background-color $time;
   }
 
-  &:hover,
-  &:focus-visible {
-    --color: #{$icon-color-hover};
+  &:hover::before,
+  &:focus-visible::before {
+    background-color: $icon-color-hover;
   }
 
-  &:active {
-    --color: #{$icon-color-active};
+  &:active::before {
+    background-color: $icon-color-active;
   }
 }
 

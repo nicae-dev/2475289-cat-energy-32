@@ -8,7 +8,6 @@ $live-example-bg-color-start: #eaeaea;
   background-color: $live-example-bg-color-start;
   padding: 25px 0 40px;
 
-  // todo почитать про сложные фоны
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr $content-width-tablet 1fr;
     padding: 0 0 100px;
@@ -75,7 +74,7 @@ $live-example-bg-color-start: #eaeaea;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px 32px;
+  gap: 15px 32px;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 100px;
@@ -106,7 +105,7 @@ $live-example-bg-color-start: #eaeaea;
   font-family: $font-secondary;
   font-size: 12px;
   font-weight: 400;
-  line-height: 1em;
+  line-height: 1.2em;
   text-align: center;
   text-transform: lowercase;
   color: $text-secondary-color;
@@ -115,7 +114,7 @@ $live-example-bg-color-start: #eaeaea;
   align-self: center;
 
   @media (min-width: $tablet-width) {
-    margin: -0.5em 0 0;
+    margin: -0.5em 8px 0;
     font-size: 14px;
     background-color: $bg-basic-color;
   }
@@ -126,12 +125,11 @@ $live-example-bg-color-start: #eaeaea;
 }
 
 .live-example__value {
-  padding: 14px;
-  padding-bottom: 17px;
+  padding: 11px 14px 14px;
   margin: 0;
   font-size: 24px;
   font-weight: 400;
-  line-height: 1em;
+  line-height: 1.2em;
   text-align: center;
   text-transform: uppercase;
   color: $text-color;
@@ -139,6 +137,7 @@ $live-example-bg-color-start: #eaeaea;
   border-radius: 5px;
 
   @media (min-width: $tablet-width) {
+    padding: 14px 14px 17px;
     font-size: 30px;
     line-height: 37px;
   }
@@ -159,6 +158,7 @@ $live-example-bg-color-start: #eaeaea;
   @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
     width: auto;
     flex-direction: column;
+    flex-basis: 290px;
     margin-left: auto;
     font-size: 20px;
     text-align: right;
@@ -166,12 +166,10 @@ $live-example-bg-color-start: #eaeaea;
 
   @media (min-width: $desktop-width) {
     width: 365px;
+    gap: 25px;
     font-size: 20px;
   }
 }
-
-// .live-example__total-term {
-// }
 
 .live-example__total-value {
   margin: 0;
@@ -189,6 +187,6 @@ $live-example-bg-color-start: #eaeaea;
     grid-column: 3 / 4;
     grid-row: 1 / -1;
     justify-self: right;
-    margin-top: 45px;
+    margin-top: 50px;
   }
 }

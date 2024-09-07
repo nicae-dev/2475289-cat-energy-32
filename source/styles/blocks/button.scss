@@ -12,6 +12,7 @@
   color: $button-color;
   border: none;
   cursor: pointer;
+  transition: background-color $time, color $time;
 
   &:hover,
   &:focus-visible {

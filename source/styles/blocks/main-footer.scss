@@ -6,11 +6,11 @@ $footer-element-separator: 1px solid $separator-color;
   padding: 16px 0;
 
   @media (min-width: $tablet-width) {
-    padding: 38px 0;
+    padding: 35px 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 49px 0;
+    padding: 50px 0;
   }
 }
 
@@ -58,10 +58,13 @@ $footer-element-separator: 1px solid $separator-color;
   line-height: 20px;
   text-decoration: none;
   color: $text-secondary-color;
+  transition: opacity $time;
 
   &::after {
     @include icon-mask(27px,34px,"html-academy");
     background-color: $icon-color;
+    transition: background-color $time;
+    flex-shrink: 0;
   }
 
   &:hover::after,

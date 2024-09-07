@@ -1,8 +1,5 @@
 $main-nav-separate-border: 1px solid #e6e6e6;
 
-// .main-nav {
-
-// }
 
 .main-nav__list {
   @include list();
@@ -35,20 +32,19 @@ $main-nav-separate-border: 1px solid #e6e6e6;
   display: block;
   font-size: 20px;
   font-weight: 400;
-  line-height: 1em;
+  line-height: 1.2em;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
   color: inherit;
+  transition: opacity $time;
 
   &:hover,
   &:focus-visible {
-    // color: rgba($main-nav-link-color, 0.6);
     opacity: 0.6;
   }
 
   &:active {
-    // color: rgba($main-nav-link-color, 0.3);
     opacity: 0.3;
   }
 

@@ -33,7 +33,7 @@
   width: $content-width-mobile;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 13px;
+  padding-bottom: 15px;
 
   @media (min-width: $tablet-width) {
     width: unset;
@@ -43,6 +43,8 @@
 }
 
 .main-header__logo {
+  transition: opacity $time;
+
   &:hover,
   &:focus {
     opacity: 0.8;
@@ -53,20 +55,27 @@
   }
 }
 
+
 .main-header__nav {
   width: 100%;
   flex-shrink: 0;
-  // align-self: center;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: opacity $time;
 
   @media (max-width: $mobile-width-max) {
     .main-header--nojs & {
-      display: block;
+      visibility: visible;
+      opacity: 1;
+      height: auto;
     }
   }
 
   @media (min-width: $tablet-width) {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    height: auto;
     padding-top: 5px;
     flex-shrink: 1;
     max-width: 500px;
@@ -81,11 +90,14 @@
 }
 
 .main-header__nav--open {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  transition: opacity $time;
 
   @media (max-width: $mobile-width-max) {
     position: absolute;
-    top: 64px;
+    top: 66px;
     left: 0;
     right: 0;
     background-color: $bg-basic-color;
@@ -103,6 +115,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: opacity $time;
 
   @media (max-width: $mobile-width-max) {
     .main-header--nojs & {
@@ -145,6 +158,3 @@
     width: 118px;
   }
 }
-
-// .index-header__hero {
-// }

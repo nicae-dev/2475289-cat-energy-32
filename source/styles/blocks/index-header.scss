@@ -29,7 +29,7 @@ $hero-left-margin-desktop: 80px;
     display: contents;
   }
 
-  &::after {
+  &::before {
     @include index-bg-image("mobile");
     content: "";
     grid-row: 2/4;
@@ -46,7 +46,7 @@ $hero-left-margin-desktop: 80px;
     @media (min-width: $desktop-width) {
       @include index-bg-image("desktop");
       grid-row: 1/-1;
-      grid-column: 6/-1;
+      grid-column: 5/-1;
       background-position: left bottom;
     }
 
@@ -62,8 +62,11 @@ $hero-left-margin-desktop: 80px;
   }
 
   @media (min-width: $desktop-width) {
-    $columns: 8;
-    grid-template-columns: 1fr repeat($columns, calc($content-width-desktop / $columns)) 1fr;
+    $column-middle2: 60px;
+    $column-middle3: 100px;
+    $column-middle1: calc($content-width-desktop / 2 - $column-middle2 - $column-middle3);
+    $column-middle4: calc($content-width-desktop / 2);
+    grid-template-columns: 1fr $column-middle1 $column-middle2 $column-middle3 $column-middle4 1fr;
     grid-template-rows: auto auto 1fr;
     min-height: 694px;
   }
@@ -98,7 +101,7 @@ $hero-left-margin-desktop: 80px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 2/6;
+    grid-column: 2/4;
 
     margin-left: $hero-left-margin-desktop;
   }
@@ -116,7 +119,7 @@ $hero-left-margin-desktop: 80px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 83px 0 40px;
+    padding: 80px 0 40px;
   }
 }
 
@@ -125,12 +128,13 @@ $hero-left-margin-desktop: 80px;
   padding-bottom: 25px;
   font-size: 14px;
   font-weight: 400;
-  line-height: 1em;
+  line-height: 1.2em;
   text-transform: uppercase;
   color: inherit;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -138,9 +142,10 @@ $hero-left-margin-desktop: 80px;
   padding-bottom: 3px;
   grid-column: 2/-2;
   grid-row: 3/5;
+  z-index: -1;
 
   @media (min-width: $desktop-width) {
-    grid-column: 5/-1;
+    grid-column: 3/-1;
     grid-row: 2/-1;
   }
 }
@@ -151,13 +156,13 @@ $hero-left-margin-desktop: 80px;
   @media (min-width: $tablet-width) {
     grid-row: 3/4;
     place-self: start start;
-    margin-top: 21px;
+    margin-top: 25px;
     margin-left: $hero-left-margin-tablet;
     padding: 14px 26px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 2/5;
+    grid-column: 2/4;
     margin-left: $hero-left-margin-desktop;
   }
 }

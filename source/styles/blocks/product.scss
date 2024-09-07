@@ -66,9 +66,9 @@
     line-height: 20px;
   }
 
-  // @media (min-width: $desktop-width) {
-  //   text-align: left;
-  // }
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
 }
 
 .product__button {
