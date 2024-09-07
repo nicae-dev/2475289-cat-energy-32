@@ -14,7 +14,7 @@ $catalog-separator-color:#cdcdcd;
 
   @media (min-width: $tablet-width) {
     margin-top: 35px;
-    margin-bottom: 75px;
+    margin-bottom: 80px;
   }
 }
 
@@ -62,7 +62,7 @@ $catalog-separator-color:#cdcdcd;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 15px 0 17px;
+    padding: 15px 0 16px;
   }
 }
 
@@ -82,10 +82,6 @@ $catalog-separator-color:#cdcdcd;
 
 .catalog-extra__promotion {
   @include catalog-extra-bg-image("mobile");
-  /* background-image:
-    linear-gradient(rgba($bg-secondary-color, 0.85),
-    rgba($bg-secondary-color, 0.85)),
-    url("../../images/promotion_cat_background-mobile@1x.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

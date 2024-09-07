@@ -10,7 +10,7 @@ $footer-element-separator: 1px solid $separator-color;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 49px 0;
+    padding: 50px 0;
   }
 }
 
@@ -51,7 +51,6 @@ $footer-element-separator: 1px solid $separator-color;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-shrink: 0;
   gap: 23px;
   font-family: $font-secondary;
   font-size: 16px;
@@ -65,6 +64,7 @@ $footer-element-separator: 1px solid $separator-color;
     @include icon-mask(27px,34px,"html-academy");
     background-color: $icon-color;
     transition: background-color $time;
+    flex-shrink: 0;
   }
 
   &:hover::after,
