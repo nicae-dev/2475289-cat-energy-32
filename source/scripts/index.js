@@ -1,4 +1,3 @@
-/* в этот файл добавляет скрипты*/
 const mainHeader = document.querySelector('.main-header');
 const buttonToggle = document.querySelector('.main-header__menu-toggle');
 const mainNav = document.querySelector('.main-header__nav');
