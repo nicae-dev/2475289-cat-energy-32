@@ -68,10 +68,9 @@ $catalog-separator-color:#cdcdcd;
 
 @mixin catalog-extra-bg-image($device) {
   $image: "../../images/promotion_cat_background-"+$device;
-
+  background-color: rgba($bg-secondary-color, 0.85);
   background-image:
-    linear-gradient(rgba($bg-secondary-color, 0.85),
-    rgba($bg-secondary-color, 0.85)),
+    linear-gradient(rgba($bg-secondary-color, 0.85), rgba($bg-secondary-color, 0.85)),
     image-set(
       url($image+"@1x.webp") type("image/webp") 1x,
       url($image+"@2x.webp") type("image/webp") 2x,

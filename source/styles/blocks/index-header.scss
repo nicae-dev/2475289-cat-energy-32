@@ -9,6 +9,8 @@ $hero-left-margin-desktop: 80px;
   @if ($device=="desktop") {
     $underground:linear-gradient(#3d3c41, #3d3c41);
   }
+
+  background-color: $hero-bg-secondary-color;
   background-image:
     linear-gradient($hero-bg-secondary-color, $hero-bg-secondary-color),
     image-set(
@@ -68,7 +70,6 @@ $hero-left-margin-desktop: 80px;
     $column-middle4: calc($content-width-desktop / 2);
     grid-template-columns: 1fr $column-middle1 $column-middle2 $column-middle3 $column-middle4 1fr;
     grid-template-rows: auto auto 1fr;
-    min-height: 694px;
   }
 }
 
@@ -145,6 +146,7 @@ $hero-left-margin-desktop: 80px;
   z-index: -1;
 
   @media (min-width: $desktop-width) {
+    padding-bottom: 50px;
     grid-column: 3/-1;
     grid-row: 2/-1;
   }

@@ -180,8 +180,15 @@ $live-example-bg-color-start: #eaeaea;
 }
 
 .live-example__slider {
+  width: 280px;
+  height: 256px;
   grid-column: 2/3;
   justify-self: center;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
 
   @media (min-width: $desktop-width) {
     grid-column: 3 / 4;

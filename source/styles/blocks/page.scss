@@ -10,3 +10,15 @@
   display: flex;
   flex-direction: column;
 }
+
+.page__header {
+  @media (min-width: $tablet-width) {
+    width: $content-width-tablet;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $content-width-desktop;
+  }
+}

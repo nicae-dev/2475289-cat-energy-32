@@ -34,6 +34,18 @@ $catalog-separator-color:#ebebeb;
   }
 }
 
+.catalog__item-card {
+  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+  }
+}
+
 .catalog__item--more {
   @media (min-width: $tablet-width) {
     padding-top: 81px;
