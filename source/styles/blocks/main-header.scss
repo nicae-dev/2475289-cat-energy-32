@@ -15,15 +15,11 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     padding: 25px 0;
-    width: $content-width-tablet;
-    margin-left: auto;
-    margin-right: auto;
     border-bottom: none;
   }
 
   @media (min-width: $desktop-width) {
     padding: 55px 0 30px;
-    width: $content-width-desktop;
   }
 }
 

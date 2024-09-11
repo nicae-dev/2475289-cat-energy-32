@@ -2,24 +2,20 @@ $card-separator-color: #cdcdcd;
 
 .product-card {
   padding: 20px 0 25px;
-  width: 280px;
-  height: 100%;
   display: grid;
-  grid-template-columns: 140px 1fr;
+  grid-template-columns: 140px 140px;
   grid-template-rows: repeat(3, auto);
 
   @media (min-width: $tablet-width) {
     padding: 0 37px 40px;
-    width: 324px;
     gap: 16px;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: minmax(100px, auto) 1fr auto;
     background: linear-gradient(to bottom, transparent 81px, $bg-primary-color 81px);
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-rows: auto auto 1fr auto;
-    width: 245px;
+    grid-template-rows: minmax(100px, auto)  auto 1fr auto;
     gap: 7px;
   }
 }
@@ -143,7 +139,7 @@ $card-separator-color: #cdcdcd;
 }
 
 .product-card__desc--more {
-  @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
     padding-inline: 35px;
   }
 }

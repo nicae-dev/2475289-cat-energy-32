@@ -16,7 +16,7 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header main-header--nojs ">
+  <header class="main-header main-header--nojs page__header">
     <div class="main-header__logo-wrapper">
       <a class="logo main-header__logo" href="index.html">
         <picture>
@@ -54,7 +54,7 @@
       <h2 class="visually-hidden">Основной каталог продукции</h2>
       <ul class="catalog__list">
         <li class="catalog__item">
-          <article class="product-card">
+          <article class="product-card catalog__item-card">
             <a class="product-card__link-image" href="#" tabindex="-1">
               <picture>
                 <source type="image/webp" media="(min-width: 768px)" srcset="images/catalog-1-tablet@1x.webp 1x, images/catalog-1-tablet@2x.webp 2x" width="161" height="172">
@@ -85,7 +85,7 @@
           </article>
         </li>
         <li class="catalog__item">
-          <article class="product-card">
+          <article class="product-card catalog__item-card">
             <a class="product-card__link-image" href="#" tabindex="-1">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="images/catalog-2-desktop@1x.webp 1x, images/catalog-2-desktop@2x.webp 2x" width="169" height="196">
@@ -119,7 +119,7 @@
         </li>
 
         <li class="catalog__item">
-          <article class="product-card">
+          <article class="product-card catalog__item-card">
             <a class="product-card__link-image" href="#" tabindex="-1">
               <picture>
                 <source type="image/webp" media="(min-width: 768px)" srcset="images/catalog-3-tablet@1x.webp 1x, images/catalog-3-tablet@2x.webp 2x" width="164" height="175">
@@ -151,7 +151,7 @@
         </li>
 
         <li class="catalog__item">
-          <article class="product-card">
+          <article class="product-card catalog__item-card">
             <a class="product-card__link-image" href="#" tabindex="-1">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="images/catalog-4-desktop@1x.webp 1x, images/catalog-4-desktop@2x.webp 2x" width="169" height="196">
@@ -185,7 +185,7 @@
         </li>
 
         <li class="catalog__item">
-          <article class="product-card">
+          <article class="product-card catalog__item-card">
             <a class="product-card__link-image" href="#" tabindex="-1">
               <picture>
                 <source type="image/webp" media="(min-width: 768px)" srcset="images/catalog-5-tablet@1x.webp 1x, images/catalog-5-tablet@2x.webp 2x" width="161" height="172">
@@ -217,7 +217,7 @@
         </li>
 
         <li class="catalog__item">
-          <article class="product-card">
+          <article class="product-card catalog__item-card">
             <a class="product-card__link-image" href="#" tabindex="-1">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="images/catalog-6-desktop@1x.webp 1x, images/catalog-6-desktop@2x.webp 2x" width="169" height="196">
@@ -251,7 +251,7 @@
         </li>
 
         <li class="catalog__item">
-          <article class="product-card">
+          <article class="product-card catalog__item-card">
             <a class="product-card__link-image" href="#" tabindex="-1">
               <picture>
                 <source type="image/webp" media="(min-width: 768px)" srcset="images/catalog-7-tablet@1x.webp 1x, images/catalog-7-tablet@2x.webp 2x" width="164" height="175">
@@ -283,7 +283,7 @@
         </li>
 
         <li class="catalog__item catalog__item--more">
-          <div class="product-card product-card--more">
+          <div class="product-card product-card--more catalog__item-card">
             <h3 class="product-card__title product-card__title--more">Показать еще 100500 товаров</h3>
             <p class="product-card__desc product-card__desc--more">
               На самом деле вкусов гораздо больше!
@@ -341,7 +341,7 @@
 
       <form class="subscribe__form container" action="https://echo.htmlacademy.ru/" method="post">
         <label class="visually-hidden" for="subscribe-form-email">Ваш e-mail</label>
-        <input class="subscribe__form-input input" type="email" name="email" id="subscribe-form-email" placeholder="кuklachev@gmail.com" required>
+        <input class="subscribe__form-input input" type="email" name="email" id="subscribe-form-email" placeholder="kuklachev@gmail.com" required>
         <button class="subscribe__form-button button" type="submit">Подписаться</button>
       </form>
     </section>
