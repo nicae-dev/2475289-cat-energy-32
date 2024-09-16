@@ -1,0 +1,32 @@
+.input-control {
+  display: flex;
+  gap: 13px;
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.12;
+  text-transform: uppercase;
+  color: $text-secondary-color;
+}
+
+.input-control__label {
+  max-width: 50%;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.input-control__input {
+  padding: 13px;
+  flex-basis: 100%;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.12;
+  text-transform: uppercase;
+  color: $text-color;
+  border: 1px solid #e7e7e7;
+
+  &::placeholder {
+    color: $text-secondary-color;
+  }
+}

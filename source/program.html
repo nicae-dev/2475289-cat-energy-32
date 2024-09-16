@@ -55,21 +55,21 @@
 
     <form class="program-form" action="https://echo.htmlacademy.ru" method="post">
       <div class="program-form__wrapper container">
-        <label class="program-form__input-wrapper">
-          <span class="program-form__label">ИМЯ:*</span>
-          <input class="program-form__input input" type="text" name="name" placeholder="барсик" required>
+        <label class="program-form__input-wrapper input-control">
+          <span class="program-form__label input-control__label">ИМЯ:*</span>
+          <input class="program-form__input input-control__input" type="text" name="name" placeholder="барсик" required>
         </label>
-        <label class="program-form__input-wrapper">
-          <span class="program-form__label">Вес (кг):*</span>
-          <input class="program-form__input input" type="number" name="weight" placeholder="7" required min="0">
+        <label class="program-form__input-wrapper input-control">
+          <span class="program-form__label input-control__label">Вес (кг):*</span>
+          <input class="program-form__input input-control__input" type="number" name="weight" placeholder="7" required min="0">
         </label>
-        <label class="program-form__input-wrapper">
-          <span class="program-form__label">Возраст (лет):</span>
-          <input class="program-form__input input" type="number" name="age" placeholder="7" required min="0">
+        <label class="program-form__input-wrapper input-control">
+          <span class="program-form__label input-control__label">Возраст (лет):</span>
+          <input class="program-form__input input-control__input" type="number" name="age" placeholder="7" required min="0">
         </label>
       </div>
 
-      <fieldset class="program-form__wrapper program-form__wrapper--radio-buttons" name="goal">
+      <fieldset class="program-form__wrapper program-form__wrapper--radio" name="goal">
         <legend class="visually-hidden">Ваша цель</legend>
         <label class="program-form__input-wrapper">
           <input class="program-form__input input-radio" type="radio" name="goal" value="weightloss" checked>
@@ -86,32 +86,54 @@
       </fieldset>
 
       <fieldset class="program-form__wrapper">
-        <legend class="program-form__subtitle section-subtitle">Контактные данные (владельца кота)</legend>
+        <legend class="program-form__subtitle section-subtitle">
+          <span class="section-subtitle__text">Контактные данные (владельца кота)</span>
+        </legend>
 
-        <label class="program-form__input-wrapper">
-          <span class="program-form__label">E-mail:*</span>
-          <input class="program-form__input input program-form__input--email" type="text" name="email" placeholder="kuklachev@gmail.com" required>
+        <label class="program-form__input-wrapper input-control">
+          <span class="program-form__label input-control__label">E-mail:*</span>
+          <input class="program-form__input program-form__input--email  input-control__input" type="text" name="email" placeholder="kuklachev@gmail.com" required>
         </label>
-        <label class="program-form__input-wrapper">
-          <span class="program-form__label">Телефон:*</span>
-          <input class="program-form__input input program-form__input--tel" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+        <label class="program-form__input-wrapper input-control">
+          <span class="program-form__label input-control__label">Телефон:*</span>
+          <input class="program-form__input program-form__input--tel input-control__input" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
         </label>
       </fieldset>
 
-    </form>
-
-    <section class="subscribe">
-      <div class="section-subtitle subscribe__title">
-        <h2 class=" section-subtitle__text">Акции и новинки</h2>
+      <div class="program-form__wrapper">
+        <label class="program-form__subtitle section-subtitle" for="program-form-comment">
+          <span class="section-subtitle__text">Комментарий</span>
+        </label>
+        <textarea name="comment" id="program-form-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
       </div>
-      <p class="subscribe__desc container">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
 
-      <form class="subscribe__form container" action="https://echo.htmlacademy.ru/" method="post">
-        <label class="visually-hidden" for="subscribe-form-email">Ваш e-mail</label>
-        <input class="subscribe__form-input input" type="email" name="email" id="subscribe-form-email" placeholder="kuklachev@gmail.com" required>
-        <button class="subscribe__form-button button" type="submit">Подписаться</button>
-      </form>
-    </section>
+      <fieldset class="program-form__wrapper program-form__wrapper--checkboxes">
+        <legend class="program-form__subtitle section-subtitle">
+          <span class="section-subtitle__text">Дополнительно</span>
+        </legend>
+        <label class="program-form__input-wrapper">
+          <input class="program-form__input input-checkbox" type="checkbox" name="sweetener" checked>
+          сахарозаменитель
+        </label>
+        <label class="program-form__input-wrapper">
+          <input class="program-form__input input-checkbox" type="checkbox" name="water">
+          питьевая вода
+        </label>
+        <label class="program-form__input-wrapper">
+          <input class="program-form__input input-checkbox" type="checkbox" name="milk">
+          молоко
+        </label>
+        <label class="program-form__input-wrapper">
+          <input class="program-form__input input-checkbox" type="checkbox" name="vitamin">
+          витамины
+        </label>
+      </fieldset>
+
+      <div class="program-form__footer">
+        <button class="program-form__button button" type="submit">отправить заявку</button>
+        <small class="program-form__hint">* — Обязательные поля</small>
+      </div>
+    </form>
 
     <section class="contacts contacts--with-bg">
       <div class="contacts__inner-wrap">

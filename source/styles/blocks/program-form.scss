@@ -2,9 +2,49 @@
   border: none;
 }
 
-// .program-form__wrapper--with-border {
-// }
+.program-form__wrapper {
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+}
 
-// .program-form__subtitle{
+.program-form__input-wrapper {
+}
 
-// }
+.program-form__label {
+}
+
+.program-form__input {
+}
+
+.program-form__wrapper--radio {
+  border: none;
+  border-top: 1px solid $separator-color;
+  border-bottom: 1px solid $separator-color;
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid $separator-color;
+  }
+}
+
+
+.program-form__subtitle {
+}
+
+.program-form__input--email {
+}
+
+.program-form__input--tel {
+}
+
+.program-form__wrapper--checkboxes {
+}
+
+.program-form__footer {
+}
+
+.program-form__button {
+}
+
+.program-form__hint {
+}
