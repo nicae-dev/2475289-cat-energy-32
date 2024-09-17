@@ -49,87 +49,94 @@
   </header>
 
   <main class="main-container">
-    <h1 class="main-container__title section-title container">Подбор программы</h1>
-
-    <p class="main-container__desc container">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-
     <form class="program-form" action="https://echo.htmlacademy.ru" method="post">
-      <div class="program-form__wrapper container">
+      <header class="program-form__header program-form__container">
+        <h1 class="program-form__title main-container__title section-title">Подбор программы</h1>
+
+        <p class="main-container__desc">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
+      </header>
+
+      <div class="program-form__group program-form__general-info program-form__container">
         <label class="program-form__input-wrapper input-control">
-          <span class="program-form__label input-control__label">ИМЯ:*</span>
+          <span class="program-form__label input-control__label input-control__label--input">ИМЯ:*</span>
           <input class="program-form__input input-control__input" type="text" name="name" placeholder="барсик" required>
         </label>
         <label class="program-form__input-wrapper input-control">
-          <span class="program-form__label input-control__label">Вес (кг):*</span>
+          <span class="program-form__label input-control__label input-control__label--input">Вес (кг):*</span>
           <input class="program-form__input input-control__input" type="number" name="weight" placeholder="7" required min="0">
         </label>
         <label class="program-form__input-wrapper input-control">
-          <span class="program-form__label input-control__label">Возраст (лет):</span>
+          <span class="program-form__label input-control__label input-control__label--input">Возраст (лет):</span>
           <input class="program-form__input input-control__input" type="number" name="age" placeholder="7" required min="0">
         </label>
       </div>
 
-      <fieldset class="program-form__wrapper program-form__wrapper--radio" name="goal">
+      <fieldset class="program-form__group program-form__group--radio" name="goal">
         <legend class="visually-hidden">Ваша цель</legend>
-        <label class="program-form__input-wrapper">
-          <input class="program-form__input input-radio" type="radio" name="goal" value="weightloss" checked>
-          похудение
-        </label>
-        <label class="program-form__input-wrapper">
-          <input class="program-form__input input-radio" type="radio" name="goal" value="weightgain">
-          Набор массы
-        </label>
-        <label class="program-form__input-wrapper">
-          <input class="program-form__input input-radio" type="radio" name="goal" value="unknown">
-          Не знаю (Нужен ваш совет)
-        </label>
+        <div class="program-form__group-inner-wrapper">
+          <label class="program-form__input-wrapper input-control">
+            <input class="program-form__input input-control__radio" type="radio" name="goal" value="weightloss" checked>
+            <span class="input-control__label">похудение</span>
+          </label>
+          <label class="program-form__input-wrapper input-control">
+            <input class="program-form__input input-control__radio" type="radio" name="goal" value="weightgain">
+            <span class="program-form__label input-control__label">Набор массы</span>
+          </label>
+          <label class="program-form__input-wrapper input-control">
+            <input class="program-form__input input-control__radio" type="radio" name="goal" value="unknown">
+            <span class="program-form__label input-control__label">Не знаю (Нужен ваш совет)</span>
+          </label>
+        </div>
       </fieldset>
 
-      <fieldset class="program-form__wrapper">
+      <fieldset class="program-form__group program-form__group--contacts">
         <legend class="program-form__subtitle section-subtitle">
           <span class="section-subtitle__text">Контактные данные (владельца кота)</span>
         </legend>
-
-        <label class="program-form__input-wrapper input-control">
-          <span class="program-form__label input-control__label">E-mail:*</span>
-          <input class="program-form__input program-form__input--email  input-control__input" type="text" name="email" placeholder="kuklachev@gmail.com" required>
-        </label>
-        <label class="program-form__input-wrapper input-control">
-          <span class="program-form__label input-control__label">Телефон:*</span>
-          <input class="program-form__input program-form__input--tel input-control__input" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
-        </label>
+        <div class="program-form-contacts__inner-wrapper program-form__container">
+          <label class="program-form__input-wrapper input-control">
+            <span class="program-form__label input-control__label input-control__label--input">E-mail:*</span>
+            <input class="program-form__input input-control__input--email  input-control__input" type="text" name="email" placeholder="kuklachev@gmail.com" required>
+          </label>
+          <label class="program-form__input-wrapper input-control">
+            <span class="program-form__label input-control__label input-control__label--input">Телефон:*</span>
+            <input class="program-form__input input-control__input--tel input-control__input" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+          </label>
+        </div>
       </fieldset>
 
-      <div class="program-form__wrapper">
+      <div class="program-form__group">
         <label class="program-form__subtitle section-subtitle" for="program-form-comment">
           <span class="section-subtitle__text">Комментарий</span>
         </label>
-        <textarea name="comment" id="program-form-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+        <textarea class="program-form__textarea input-control input-control--textarea program-form__container" name="comment" id="program-form-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
       </div>
 
-      <fieldset class="program-form__wrapper program-form__wrapper--checkboxes">
+      <fieldset class="program-form__group program-form__group--extra">
         <legend class="program-form__subtitle section-subtitle">
           <span class="section-subtitle__text">Дополнительно</span>
         </legend>
-        <label class="program-form__input-wrapper">
-          <input class="program-form__input input-checkbox" type="checkbox" name="sweetener" checked>
-          сахарозаменитель
-        </label>
-        <label class="program-form__input-wrapper">
-          <input class="program-form__input input-checkbox" type="checkbox" name="water">
-          питьевая вода
-        </label>
-        <label class="program-form__input-wrapper">
-          <input class="program-form__input input-checkbox" type="checkbox" name="milk">
-          молоко
-        </label>
-        <label class="program-form__input-wrapper">
-          <input class="program-form__input input-checkbox" type="checkbox" name="vitamin">
-          витамины
-        </label>
+        <div class="program-form__container program-form-extra__inner-wrapper">
+          <label class="program-form__input-wrapper input-control">
+            <input class="program-form__input input-control__checkbox" type="checkbox" name="sweetener" checked>
+            <span class="program-form__label input-control__label">сахарозаменитель</span>
+          </label>
+          <label class="program-form__input-wrapper input-control">
+            <input class="program-form__input input-control__checkbox" type="checkbox" name="water">
+            <span class="program-form__label input-control__label">питьевая вода</span>
+          </label>
+          <label class="program-form__input-wrapper input-control">
+            <input class="program-form__input input-control__checkbox" type="checkbox" name="milk">
+            <span class="program-form__label input-control__label">молоко</span>
+          </label>
+          <label class="program-form__input-wrapper input-control">
+            <input class="program-form__input input-control__checkbox" type="checkbox" name="vitamin">
+            <span class="program-form__label input-control__label">витамины</span>
+          </label>
+        </div>
       </fieldset>
 
-      <div class="program-form__footer">
+      <div class="program-form__footer program-form__container">
         <button class="program-form__button button" type="submit">отправить заявку</button>
         <small class="program-form__hint">* — Обязательные поля</small>
       </div>

@@ -1,14 +1,66 @@
 .program-form {
+  margin-bottom: 25px;
   border: none;
 }
 
-.program-form__wrapper {
-  margin: 0 auto;
-  padding: 0;
+.program-form__container {
+  @include container;
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+    padding-inline: 40px;
+  }
+}
+
+.program-form__header {
+  margin-top: 25px;
+  margin-bottom: 65px;
+}
+
+.program-form__title {
+  margin-bottom: 55px;
+}
+
+.program-form__group {
+  margin: 0 auto 24px;
+  // padding: 0;
   border: none;
+}
+
+.program-form__group--extra{
+
+}
+
+.program-form__group--contacts{
+
+}
+
+.program-form-extra__inner-wrapper{
+
+}
+
+.program-form-contacts__inner-wrapper{
+
 }
 
 .program-form__input-wrapper {
+  & ~ & {
+    margin-top: 14px;
+  }
+
+  @media (min-width: $tablet-width) {
+    & ~ & {
+      margin-top: 20px;
+    }
+  }
+}
+
+.program-form__group-inner-wrapper {
+  max-width: $content-width-mobile;
+  margin-inline: auto;
+
+  @media (min-width: $tablet-width) {
+    max-width: unset;
+  }
 }
 
 .program-form__label {
@@ -17,7 +69,8 @@
 .program-form__input {
 }
 
-.program-form__wrapper--radio {
+.program-form__group--radio {
+  padding-block: 19px;
   border: none;
   border-top: 1px solid $separator-color;
   border-bottom: 1px solid $separator-color;
@@ -29,6 +82,9 @@
 
 
 .program-form__subtitle {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 0;
 }
 
 .program-form__input--email {
@@ -37,14 +93,30 @@
 .program-form__input--tel {
 }
 
-.program-form__wrapper--checkboxes {
+.program-form__group--checkboxes {
 }
 
 .program-form__footer {
+  display: grid;
+  gap: 21px;
 }
 
 .program-form__button {
 }
 
+.program-form__textarea {
+  min-height: 150px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    min-height: 175px;
+  }
+}
+
 .program-form__hint {
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
 }
