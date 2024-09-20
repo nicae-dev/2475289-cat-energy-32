@@ -1,3 +1,5 @@
+$input-border-focus: 2px solid #444444;
+
 .input-control {
   display: flex;
   gap: 13px;
@@ -19,57 +21,110 @@
 }
 
 .input-control--radio {
+  --size: 30px;
+
   & input[type="radio"] {
-    display: none;
+    @include visually-hidden();
   }
 
   &::before {
     content: "";
     display: block;
-    width: 30px;
-    height: 30px;
+    width: var(--size);
+    height: var(--size);
     background-color: $button-bg-color;
-    border: 1px solid $input-border;
+    border: 1px solid $input-border-color;
     border-radius: 50%;
-    box-shadow: inset 0 0 0 16px $bg-basic-color;
+    box-shadow: inset 0 0 0 calc(var(--size) / 2 + 1px) $bg-basic-color;
     transition: box-shadow $time-fast ease-in-out;
+
+    @media (min-width: $tablet-width) {
+      --size: 40px;
+    }
   }
 
   &:has(:checked)::before {
-    box-shadow: inset 0 0 0 8px $bg-basic-color;
+    box-shadow: inset 0 0 0 calc(var(--size) / 4) $bg-basic-color;
   }
 
   &:hover::before,
   &:active::before {
     border-color: #bababa;
+  }
+
+  &:focus-within::before {
+    outline: $input-border-focus;
   }
 }
 
 .input-control--checkbox {
+  --size: 30px;
+
   & input[type="checkbox"] {
-    display: none;
+    @include visually-hidden();
   }
 
   &::before {
     content: "";
     display: block;
-    width: 30px;
-    height: 30px;
+    width: var(--size);
+    height: var(--size);
     background-color: $bg-basic-color;
-    border: 1px solid $input-border;
+    border: 1px solid $input-border-color;
     transition: background-image $time-fast ease-in-out;
+
+    @media (min-width: $tablet-width) {
+      --size: 40px;
+    }
   }
 
   &:has(:checked)::before {
-    @include icon(30px, 30px, "tick");
-    background-size: 24px 19px;
+    @include icon-bg-image("tick");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 18px 14px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 24px 19px;
+    }
   }
 
   &:hover::before,
   &:active::before {
     border-color: #bababa;
   }
+
+  &:focus-within::before {
+    outline: $input-border-focus;
+  }
 }
+
+.input-control--tel::after {
+  @include icon-mask(20px, 20px,"phone");
+}
+
+.input-control--email::after {
+  @include icon-mask(20px, 20px,"email");
+}
+
+.input-control--email,
+.input-control--tel {
+  position: relative;
+
+  &::after {
+    background-color: $text-color;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 13px;
+  }
+
+  &:has(:focus-visible)::after {
+    background-color: $icon-color-hover;
+  }
+}
+
 
 .input-control__label {
   flex-shrink: 0;
@@ -90,14 +145,20 @@
   text-transform: uppercase;
   color: $text-color;
   border: 1px solid #e7e7e7;
+  transition: border-color $time;
 
   &:placeholder-shown {
     font-family: inherit;
     color: $text-secondary-color;
   }
 
+  &:hover,
+  &:active {
+    border-color: $input-border-color-hover;
+  }
+
   &:focus-within {
-    outline: 2px solid #444444;
+    outline: $input-border-focus;
   }
 
   &[type="number"]::-webkit-inner-spin-button,
@@ -108,23 +169,11 @@
 }
 
 .input-control__input--email {
-  border-color: #cdcdcd;
+  border-color: $input-border-color;
+  padding-right: 45px;
 }
 
 .input-control__input--tel {
-  border-color: #cdcdcd;
-}
-
-.input-control--textarea {
-  padding: 14px;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
-  border: 1px solid #e7e7e7;
-
-  &:placeholder-shown {
-    font-family: inherit;
-    color: $text-secondary-color;
-  }
+  border-color: $input-border-color;
+  padding-right: 45px;
 }
