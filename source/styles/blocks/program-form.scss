@@ -85,6 +85,12 @@
   width: 100%;
   margin-bottom: 30px;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    & br {
+      display: none;
+    }
+  }
 }
 
 // .program-form__input--email {
