@@ -59,15 +59,15 @@
       <div class="program-form__group program-form__general-info program-form__container">
         <label class="program-form__input-control input-control">
           <span class="input-control__label input-control__label--input">ИМЯ:*</span>
-          <input class="program-form__input input-control__input" type="text" name="name" placeholder="барсик" required>
+          <input class="input-control__input" type="text" name="name" placeholder="барсик" required>
         </label>
         <label class="program-form__input-control input-control">
           <span class="input-control__label input-control__label--input">Вес (кг):*</span>
-          <input class="program-form__input input-control__input" type="number" name="weight" placeholder="7" required min="0">
+          <input class="input-control__input" type="number" name="weight" placeholder="7" required min="0">
         </label>
         <label class="program-form__input-control input-control">
           <span class="input-control__label input-control__label--input">Возраст (лет):</span>
-          <input class="program-form__input input-control__input" type="number" name="age" placeholder="7" required min="0">
+          <input class="input-control__input" type="number" name="age" placeholder="7" required min="0">
         </label>
       </div>
 
@@ -75,17 +75,17 @@
         <legend class="visually-hidden">Ваша цель</legend>
         <div class="program-form__group-inner-wrapper">
           <label class="program-form__input-control input-control">
-            <input class="program-form__input input-control__radio" type="radio" name="goal" value="weightloss" checked>
+            <input class="input-control__radio" type="radio" name="goal" value="weightloss" checked>
             <!-- <span class="input-control__label">похудение</span> -->
             похудение
           </label>
           <label class="program-form__input-control input-control">
-            <input class="program-form__input input-control__radio" type="radio" name="goal" value="weightgain">
+            <input class="input-control__radio" type="radio" name="goal" value="weightgain">
             <!-- <span class="input-control__label">Набор массы</span> -->
             Набор массы
           </label>
           <label class="program-form__input-control input-control">
-            <input class="program-form__input input-control__radio" type="radio" name="goal" value="unknown">
+            <input class="input-control__radio" type="radio" name="goal" value="unknown">
             <!-- <span class="input-control__label">Не знаю (Нужен ваш совет)</span> -->
             Не знаю (Нужен ваш совет)
           </label>
@@ -97,13 +97,19 @@
           <span class="section-subtitle__text">Контактные данные <br>(владельца кота)</span>
         </legend>
         <div class="program-form__container program-form__group-contacts-inner-wrapper">
-          <label class="program-form__input-control input-control input-control--email">
+          <label class="program-form__input-control input-control">
             <span class="input-control__label input-control__label--input ">E-mail:*</span>
-            <input class="program-form__input input-control__input--email  input-control__input" type="text" name="email" placeholder="kuklachev@gmail.com" required>
+
+            <span class="input-control__wrapper-with-icon input-control__wrapper-with-icon--email">
+              <input class="input-control__input" type="text" name="email" placeholder="kuklachev@gmail.com" required>
+            </span>
+
           </label>
-          <label class="program-form__input-control input-control  input-control--tel">
+          <label class="program-form__input-control input-control">
             <span class="input-control__label input-control__label--input">Телефон:*</span>
-            <input class="program-form__input input-control__input--tel input-control__input" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+            <span class="input-control__wrapper-with-icon input-control__wrapper-with-icon--tel">
+              <input class="input-control__input" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+            </span>
           </label>
         </div>
       </fieldset>
@@ -123,22 +129,22 @@
         </legend>
         <div class="program-form__container program-form__group-extra-inner-wrapper">
           <label class="program-form__input-control input-control">
-            <input class="program-form__input input-control__checkbox" type="checkbox" name="sweetener" checked>
+            <input class="input-control__checkbox" type="checkbox" name="sweetener" checked>
             <!-- <span class="input-control__label">сахарозаменитель</span> -->
             сахарозаменитель
           </label>
           <label class="program-form__input-control input-control">
-            <input class="program-form__input input-control__checkbox" type="checkbox" name="water">
+            <input class="input-control__checkbox" type="checkbox" name="water">
             <!-- <span class="input-control__label">питьевая вода</span> -->
             питьевая вода
           </label>
           <label class="program-form__input-control input-control">
-            <input class="program-form__input input-control__checkbox" type="checkbox" name="milk">
+            <input class="input-control__checkbox" type="checkbox" name="milk">
             <!-- <span class="input-control__label">молоко</span> -->
             молоко
           </label>
           <label class="program-form__input-control input-control">
-            <input class="program-form__input input-control__checkbox" type="checkbox" name="vitamin">
+            <input class="input-control__checkbox" type="checkbox" name="vitamin">
             <!-- <span class=" input-control__label">витамины</span> -->
             витамины
           </label>

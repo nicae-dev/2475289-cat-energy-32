@@ -22,35 +22,8 @@ $input-border-focus: 2px solid #444444;
   }
 }
 
-.input-control--tel::after {
-  @include icon-mask(20px, 20px,"phone");
-}
-
-.input-control--email::after {
-  @include icon-mask(20px, 20px,"email");
-}
-
-.input-control--email,
-.input-control--tel {
-  position: relative;
-
-  &::after {
-    background-color: $text-color;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: 13px;
-  }
-
-  &:has(:focus-visible)::after {
-    background-color: $icon-color-hover;
-  }
-}
-
-
-.input-control__label {
-}
+// .input-control__label {
+// }
 
 .input-control__label--input {
   max-width: 50%;
@@ -62,12 +35,12 @@ $input-border-focus: 2px solid #444444;
   padding: 13px;
   min-width: 100px;
   font-family: inherit;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.12;
-  text-transform: uppercase;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: inherit;
   color: $text-color;
-  border: 1px solid #e7e7e7;
+  border: 1px solid $input-border-color;
   transition: border-color $time;
 
   &:placeholder-shown {
@@ -92,13 +65,41 @@ $input-border-focus: 2px solid #444444;
 }
 
 .input-control__input--email {
-  border-color: $input-border-color;
   padding-right: 45px;
 }
 
 .input-control__input--tel {
-  border-color: $input-border-color;
   padding-right: 45px;
+}
+
+.input-control__wrapper-with-icon {
+  display: flex;
+  flex-grow: 1;
+  align-self: flex-start;
+  position: relative;
+
+  &::after {
+    background-color: $text-color;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 13px;
+  }
+
+  &:has(:focus-visible)::after {
+    background-color: $icon-color-hover;
+  }
+
+  &--tel::after {
+    @include icon-mask(20px, 20px,"phone");
+    height: 100%;
+  }
+
+  &--email::after {
+    @include icon-mask(20px, 20px,"email");
+    height: 100%;
+  }
 }
 
 .input-control__radio {
