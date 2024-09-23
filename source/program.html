@@ -57,16 +57,16 @@
       </header>
 
       <div class="program-form__group program-form__general-info program-form__container">
-        <label class="program-form__input-wrapper input-control">
-          <span class="program-form__label input-control__label input-control__label--input">ИМЯ:*</span>
+        <label class="program-form__input-control input-control">
+          <span class="input-control__label input-control__label--input">ИМЯ:*</span>
           <input class="program-form__input input-control__input" type="text" name="name" placeholder="барсик" required>
         </label>
-        <label class="program-form__input-wrapper input-control">
-          <span class="program-form__label input-control__label input-control__label--input">Вес (кг):*</span>
+        <label class="program-form__input-control input-control">
+          <span class="input-control__label input-control__label--input">Вес (кг):*</span>
           <input class="program-form__input input-control__input" type="number" name="weight" placeholder="7" required min="0">
         </label>
-        <label class="program-form__input-wrapper input-control">
-          <span class="program-form__label input-control__label input-control__label--input">Возраст (лет):</span>
+        <label class="program-form__input-control input-control">
+          <span class="input-control__label input-control__label--input">Возраст (лет):</span>
           <input class="program-form__input input-control__input" type="number" name="age" placeholder="7" required min="0">
         </label>
       </div>
@@ -74,17 +74,20 @@
       <fieldset class="program-form__group program-form__group--radio" name="goal">
         <legend class="visually-hidden">Ваша цель</legend>
         <div class="program-form__group-inner-wrapper">
-          <label class="program-form__input-wrapper input-control input-control--radio">
-            <input class="program-form__input " type="radio" name="goal" value="weightloss" checked>
-            <span class="input-control__label">похудение</span>
+          <label class="program-form__input-control input-control">
+            <input class="program-form__input input-control__radio" type="radio" name="goal" value="weightloss" checked>
+            <!-- <span class="input-control__label">похудение</span> -->
+            похудение
           </label>
-          <label class="program-form__input-wrapper input-control input-control--radio">
-            <input class="program-form__input" type="radio" name="goal" value="weightgain">
-            <span class="program-form__label input-control__label">Набор массы</span>
+          <label class="program-form__input-control input-control">
+            <input class="program-form__input input-control__radio" type="radio" name="goal" value="weightgain">
+            <!-- <span class="input-control__label">Набор массы</span> -->
+            Набор массы
           </label>
-          <label class="program-form__input-wrapper input-control input-control--radio">
-            <input class="program-form__input" type="radio" name="goal" value="unknown">
-            <span class="program-form__label input-control__label">Не знаю (Нужен ваш совет)</span>
+          <label class="program-form__input-control input-control">
+            <input class="program-form__input input-control__radio" type="radio" name="goal" value="unknown">
+            <!-- <span class="input-control__label">Не знаю (Нужен ваш совет)</span> -->
+            Не знаю (Нужен ваш совет)
           </label>
         </div>
       </fieldset>
@@ -94,12 +97,12 @@
           <span class="section-subtitle__text">Контактные данные <br>(владельца кота)</span>
         </legend>
         <div class="program-form__container program-form__group-contacts-inner-wrapper">
-          <label class="program-form__input-wrapper input-control input-control--email">
-            <span class="program-form__label input-control__label input-control__label--input ">E-mail:*</span>
+          <label class="program-form__input-control input-control input-control--email">
+            <span class="input-control__label input-control__label--input ">E-mail:*</span>
             <input class="program-form__input input-control__input--email  input-control__input" type="text" name="email" placeholder="kuklachev@gmail.com" required>
           </label>
-          <label class="program-form__input-wrapper input-control  input-control--tel">
-            <span class="program-form__label input-control__label input-control__label--input">Телефон:*</span>
+          <label class="program-form__input-control input-control  input-control--tel">
+            <span class="input-control__label input-control__label--input">Телефон:*</span>
             <input class="program-form__input input-control__input--tel input-control__input" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
           </label>
         </div>
@@ -119,21 +122,25 @@
           <span class="section-subtitle__text">Дополнительно</span>
         </legend>
         <div class="program-form__container program-form__group-extra-inner-wrapper">
-          <label class="program-form__input-wrapper input-control input-control--checkbox">
-            <input class="program-form__input" type="checkbox" name="sweetener" checked>
-            <span class="program-form__label input-control__label">сахарозаменитель</span>
+          <label class="program-form__input-control input-control">
+            <input class="program-form__input input-control__checkbox" type="checkbox" name="sweetener" checked>
+            <!-- <span class="input-control__label">сахарозаменитель</span> -->
+            сахарозаменитель
           </label>
-          <label class="program-form__input-wrapper input-control input-control--checkbox">
-            <input class="program-form__input" type="checkbox" name="water">
-            <span class="program-form__label input-control__label">питьевая вода</span>
+          <label class="program-form__input-control input-control">
+            <input class="program-form__input input-control__checkbox" type="checkbox" name="water">
+            <!-- <span class="input-control__label">питьевая вода</span> -->
+            питьевая вода
           </label>
-          <label class="program-form__input-wrapper input-control input-control--checkbox">
-            <input class="program-form__input" type="checkbox" name="milk">
-            <span class="program-form__label input-control__label">молоко</span>
+          <label class="program-form__input-control input-control">
+            <input class="program-form__input input-control__checkbox" type="checkbox" name="milk">
+            <!-- <span class="input-control__label">молоко</span> -->
+            молоко
           </label>
-          <label class="program-form__input-wrapper input-control input-control--checkbox">
-            <input class="program-form__input" type="checkbox" name="vitamin">
-            <span class="program-form__label  input-control__label">витамины</span>
+          <label class="program-form__input-control input-control">
+            <input class="program-form__input input-control__checkbox" type="checkbox" name="vitamin">
+            <!-- <span class=" input-control__label">витамины</span> -->
+            витамины
           </label>
         </div>
       </fieldset>
