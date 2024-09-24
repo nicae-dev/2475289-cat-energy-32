@@ -15,6 +15,7 @@ $input-border-focus: 2px solid #444444;
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 1.5;
+    gap: 18px;
   }
 
   &:disabled {

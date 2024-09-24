@@ -1,3 +1,7 @@
+$program-form-padding-tablet: 40px;
+$program-form-columns-2: repeat(2, 1fr);
+$program-form-columns-2-gap: 30px 80px;
+
 .program-form {
   margin-bottom: 25px;
   border: none;
@@ -7,7 +11,7 @@
   @include container;
 
   @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
-    padding-inline: 40px;
+    padding-inline: $program-form-padding-tablet;
   }
 }
 
@@ -24,6 +28,10 @@
   margin: 0 auto 24px;
   // padding: 0;
   border: none;
+
+  @media (min-width: $desktop-width) {
+    margin-inline: 0;
+  }
 }
 
 .program-form__group-extra {
@@ -47,9 +55,9 @@
     margin-top: 14px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (max-width: $mobile-width-max) {
     & ~ & {
-      margin-top: 20px;
+      margin-top: 32px;
     }
   }
 }
@@ -71,9 +79,59 @@
 
   @media (min-width: $tablet-width) {
     border: 1px solid $separator-color;
+    padding: 23px 27px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+    width: calc($content-width-tablet - 2*$program-form-padding-tablet);
   }
 }
 
+.program-form__group--general-info {
+  width: unset;
+}
+
+.program-form__group-columns-2 {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: $program-form-columns-2;
+    gap: $program-form-columns-2-gap;
+    max-width: unset;
+    width: $content-width-desktop;
+    margin-inline: auto;
+  }
+}
+
+.program-form__group-extra-inner-wrapper {
+  //сброс отступов, так как они мешают при сетке из более, чем 1 столбца
+  & .program-form__input-control {
+    margin-top: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 60px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.program-form__group-contacts-inner-wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: $program-form-columns-2;
+    gap: $program-form-columns-2-gap;
+
+    //сброс отступов, так как они мешают при сетке из более, чем 1 столбца
+    & > .program-form__input-control {
+      margin-top: 0;
+    }
+  }
+}
 
 .program-form__subtitle {
   width: 100%;
@@ -81,6 +139,8 @@
   padding: 0;
 
   @media (min-width: $tablet-width) {
+    font-size: 36px;
+
     & br {
       display: none;
     }
@@ -99,6 +159,16 @@
 .program-form__footer {
   display: grid;
   gap: 21px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: $program-form-columns-2;
+    gap: 30px 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: $program-form-columns-2-gap;
+  }
 }
 
 // .program-form__button {
@@ -119,4 +189,9 @@
   font-size: 14px;
   line-height: 1.14;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    font-size: 16px;
+  }
 }

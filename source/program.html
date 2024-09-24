@@ -56,41 +56,44 @@
         <p class="main-container__desc">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
       </header>
 
-      <div class="program-form__group program-form__general-info program-form__container">
-        <label class="program-form__input-control input-control">
-          <span class="input-control__label input-control__label--input">ИМЯ:*</span>
-          <input class="input-control__input" type="text" name="name" placeholder="барсик" required>
-        </label>
-        <label class="program-form__input-control input-control">
-          <span class="input-control__label input-control__label--input">Вес (кг):*</span>
-          <input class="input-control__input" type="number" name="weight" placeholder="7" required min="0">
-        </label>
-        <label class="program-form__input-control input-control">
-          <span class="input-control__label input-control__label--input">Возраст (лет):</span>
-          <input class="input-control__input" type="number" name="age" placeholder="7" required min="0">
-        </label>
-      </div>
+      <div class="program-form__group-columns-2">
 
-      <fieldset class="program-form__group program-form__group--radio" name="goal">
-        <legend class="visually-hidden">Ваша цель</legend>
-        <div class="program-form__group-inner-wrapper">
+        <div class="program-form__group program-form__group--general-info program-form__container">
           <label class="program-form__input-control input-control">
-            <input class="input-control__radio" type="radio" name="goal" value="weightloss" checked>
-            <!-- <span class="input-control__label">похудение</span> -->
-            похудение
+            <span class="input-control__label input-control__label--input">ИМЯ:*</span>
+            <input class="input-control__input" type="text" name="name" placeholder="барсик" required>
           </label>
           <label class="program-form__input-control input-control">
-            <input class="input-control__radio" type="radio" name="goal" value="weightgain">
-            <!-- <span class="input-control__label">Набор массы</span> -->
-            Набор массы
+            <span class="input-control__label input-control__label--input">Вес (кг):*</span>
+            <input class="input-control__input" type="number" name="weight" placeholder="7" required min="0">
           </label>
           <label class="program-form__input-control input-control">
-            <input class="input-control__radio" type="radio" name="goal" value="unknown">
-            <!-- <span class="input-control__label">Не знаю (Нужен ваш совет)</span> -->
-            Не знаю (Нужен ваш совет)
+            <span class="input-control__label input-control__label--input">Возраст (лет):</span>
+            <input class="input-control__input" type="number" name="age" placeholder="7" required min="0">
           </label>
         </div>
-      </fieldset>
+
+        <fieldset class="program-form__group program-form__group--radio" name="goal">
+          <legend class="visually-hidden">Ваша цель</legend>
+          <div class="program-form__group-inner-wrapper">
+            <label class="program-form__input-control input-control">
+              <input class="input-control__radio" type="radio" name="goal" value="weightloss" checked>
+              <!-- <span class="input-control__label">похудение</span> -->
+              похудение
+            </label>
+            <label class="program-form__input-control input-control">
+              <input class="input-control__radio" type="radio" name="goal" value="weightgain">
+              <!-- <span class="input-control__label">Набор массы</span> -->
+              Набор массы
+            </label>
+            <label class="program-form__input-control input-control">
+              <input class="input-control__radio" type="radio" name="goal" value="unknown">
+              <!-- <span class="input-control__label">Не знаю (Нужен ваш совет)</span> -->
+              Не знаю (Нужен ваш совет)
+            </label>
+          </div>
+        </fieldset>
+      </div>
 
       <fieldset class="program-form__group program-form__group-contacts">
         <legend class="program-form__subtitle section-subtitle">
