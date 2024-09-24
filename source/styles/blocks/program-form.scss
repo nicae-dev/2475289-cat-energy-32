@@ -88,7 +88,9 @@ $program-form-columns-2-gap: 30px 80px;
 }
 
 .program-form__group--general-info {
-  width: unset;
+  @media (min-width: $desktop-width) {
+    width: unset;
+  }
 }
 
 .program-form__group-columns-2 {
